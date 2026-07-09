@@ -1,0 +1,160 @@
+{
+  "slug": "finance",
+  "name": "AI + 金融科技",
+  "aliases": ["AI金融", "金融科技", "Fintech AI"],
+  "emoji": "💰",
+  "oneLiner": "AI金融科技通过智能风控、量化交易、智能客服等技术，在金融业数字化转型浪潮中，成为所有行业中AI渗透率最高的领域之一。",
+  "stage": "growth",
+  "heroDeck": "智能风控、量化交易、智能客服——金融是AI渗透率最高的行业之一",
+  "heroHook": "500亿市场 × 30%增速 — 金融AI已从辅助工具升级为核心基础设施",
+  "tags": [
+    { "label": "热门", "variant": "hot" },
+    { "label": "500+亿市场" },
+    { "label": "30% CAGR" }
+  ],
+  "searchKeywords": ["金融", "银行", "保险", "风控", "量化", "智能投顾", "支付", "信贷"],
+  "headlineMetrics": [
+    { "label": "市场规模 (2024)", "value": "500+", "unit": "亿", "year": 2024, "trend": "up", "source": "弗若斯特沙利文", "insight": "中国AI金融市场规模在2024年突破500亿元，是AI医疗的2.5倍。智能风控是最大细分市场，占比超过40%。" },
+    { "label": "年复合增速 CAGR", "value": "30", "unit": "%", "year": 2024, "trend": "up", "source": "亿欧智库", "insight": "金融市场增速略低于医疗(40%)和自动驾驶(45%)，但因为基数大、渗透率高，绝对增量最大。预计2027年市场规模将突破1000亿元。" },
+    { "label": "市场集中度 CR5", "value": "45", "unit": "%", "year": 2024, "trend": "flat", "source": "公开资料整理", "insight": "金融AI市场集中度较高，蚂蚁集团、腾讯金融科技、百度智能云、华为金融、京东科技五家占据近半壁江山。但垂直赛道仍有创业公司空间。" },
+    { "label": "AI渗透率（银行）", "value": "85", "unit": "%", "year": 2024, "trend": "up", "source": "银保监会调研", "insight": "全国主要商业银行中约85%已部署至少一款AI系统，智能风控和智能客服是渗透率最高的两个场景。金融业AI预算增速超过整体IT预算增速。" },
+    { "label": "智能化ROI", "value": "3.5", "unit": "x", "year": 2024, "trend": "up", "source": "麦肯锡中国金融报告", "insight": "金融机构AI投资平均回报率达3.5倍，智能风控的坏账率平均下降30-50%，智能客服的人力替代率超过60%。" }
+  ],
+  "valueChain": {
+    "upstream": {
+      "name": "上游 — 数据与基础设施",
+      "aiPenetration": "high",
+      "nodes": [
+        { "name": "金融数据（交易/征信/行为/舆情）", "valueShare": 20, "marginRange": [40, 60] },
+        { "name": "AI 算力与云服务", "valueShare": 15, "marginRange": [25, 40] },
+        { "name": "隐私计算/联邦学习", "valueShare": 10, "marginRange": [50, 70] }
+      ]
+    },
+    "midstream": {
+      "name": "中游 — AI 能力平台",
+      "aiPenetration": "very_high",
+      "nodes": [
+        { "name": "智能风控引擎（反欺诈/信用评分）", "valueShare": 30, "marginRange": [60, 80] },
+        { "name": "量化交易/智能投研", "valueShare": 20, "marginRange": [55, 75] },
+        { "name": "NLP/知识图谱（合同/研报/法规）", "valueShare": 15, "marginRange": [50, 65] },
+        { "name": "智能客服/外呼机器人", "valueShare": 10, "marginRange": [35, 50] }
+      ]
+    },
+    "downstream": {
+      "name": "下游 — 金融业务场景",
+      "aiPenetration": "high",
+      "nodes": [
+        { "name": "银行（信贷/风控/客服/营销）", "valueShare": 40, "marginRange": [20, 35] },
+        { "name": "保险（核保/理赔/精算/客服）", "valueShare": 25, "marginRange": [25, 40] },
+        { "name": "证券/基金（量化/投顾/研报）", "valueShare": 15, "marginRange": [35, 55] },
+        { "name": "互联网金融（消费金融/支付）", "valueShare": 10, "marginRange": [30, 50] }
+      ]
+    }
+  },
+  "playerCategories": [
+    {
+      "category": "互联网巨头",
+      "players": [
+        { "name": "蚂蚁集团", "description": "智能风控+信用评分(芝麻信用)+AI客服，金融AI全栈能力最强" },
+        { "name": "腾讯金融科技", "description": "微信支付+微粒贷+保险，AI能力嵌入超级App生态" },
+        { "name": "百度智能云", "description": "金融AI中台+智能风控+数字人，以技术输出模式服务银行" }
+      ]
+    },
+    {
+      "category": "金融IT龙头",
+      "players": [
+        { "name": "恒生电子", "description": "证券/基金核心交易系统+AI投研，金融市场IT基础设施龙头" },
+        { "name": "宇信科技", "description": "银行IT解决方案+AI中台，服务超过80%的国内银行" }
+      ]
+    },
+    {
+      "category": "AI 创业新锐",
+      "players": [
+        { "name": "第四范式", "description": "决策类AI平台，金融行业最大客户群之一" },
+        { "name": "百融云创", "description": "金融风控AI，服务超过6000家金融机构" }
+      ]
+    },
+    {
+      "category": "垂直赛道领军者",
+      "players": [
+        { "name": "同盾科技", "description": "反欺诈和风控AI，银行和保险行业渗透率领先" }
+      ]
+    }
+  ],
+  "aiOpportunities": [
+    { "title": "智能风控（反欺诈+信用评分）", "maturityScore": 5, "valueCeilingScore": 5, "verdict": "proven" },
+    { "title": "AI 量化交易", "maturityScore": 4, "valueCeilingScore": 5, "verdict": "scaling" },
+    { "title": "智能客服/外呼机器人", "maturityScore": 5, "valueCeilingScore": 3, "verdict": "proven" },
+    { "title": "生成式AI投研报告", "maturityScore": 2, "valueCeilingScore": 4, "verdict": "blue-ocean" },
+    { "title": "智能核保理赔", "maturityScore": 3, "valueCeilingScore": 4, "verdict": "steady" },
+    { "title": "联邦学习+隐私计算", "maturityScore": 3, "valueCeilingScore": 5, "verdict": "pre-boom" }
+  ],
+  "portersFive": [
+    { "force": "新进入者威胁", "intensity": 3, "rationale": "牌照+合规壁垒" },
+    { "force": "供应商议价", "intensity": 2, "rationale": "AI能力供给充足" },
+    { "force": "买家议价", "intensity": 3, "rationale": "大行有自研能力" },
+    { "force": "替代品威胁", "intensity": 2, "rationale": "AI已成为必需" },
+    { "force": "现有竞争", "intensity": 5, "rationale": "互联网/IT/创业三方混战" }
+  ],
+  "trends": [
+    {
+      "title": "大模型在金融场景的深度落地",
+      "body": "银行和保险机构正加速部署大模型——从智能客服、研报自动生成到合规审查，大模型的文本理解和生成能力在金融业找到了最丰富的应用场景。工商银行、建设银行等大行已发布自研金融大模型。",
+      "callout": "金融大模型需要解决幻觉问题（金融容错率极低）、数据安全（数据不出行）和合规审查（每一句回答都要可追溯）三大挑战。这不是技术问题，是产品设计问题。"
+    },
+    {
+      "title": "隐私计算从概念到规模化",
+      "body": "联邦学习、多方安全计算等隐私计算技术正从POC阶段走向规模化部署。多家银行联合建模(风控/反欺诈)而不共享原始数据，成为金融AI数据合规的最佳实践。",
+      "callout": "隐私计算产品需要「安全验证+性能优化+业务价值证明」三者同时到位，缺一不可。AI PM需要理解密码学原理和安全模型，才能设计出既安全又高效的产品。"
+    },
+    {
+      "title": "从AI辅助到AI原生金融产品",
+      "body": "新一代的AI原生金融产品正在出现——AI基金经理、AI保险精算师、AI信贷审批官，不再是「人+AI辅助」的模式，而是AI独立完成核心决策。",
+      "callout": "AI原生金融产品面临的最大挑战是监管和信任——如何向监管证明AI决策的可解释性？如何让客户信任一个「黑箱」的金融建议？这是AI PM需要解决的核心问题。"
+    }
+  ],
+  "myths": [
+    { "myth": "「金融AI就是量化交易」", "reality": "量化交易只占金融AI市场的不到20%。智能风控、智能客服、智能营销才是体量最大的场景。" },
+    { "myth": "「大模型会替代所有金融岗位」", "reality": "大模型擅长文本处理和知识检索，但金融决策需要合规判断、风险承担和客户关系管理——这些短期内无法被AI替代。" },
+    { "myth": "「金融AI创业没有机会了」", "reality": "虽然巨头布局全面，但隐私计算、可解释AI、监管科技(RegTech)等新兴赛道仍有大量未被满足的需求。" }
+  ],
+  "quiz": [
+    {
+      "question": "中国AI金融市场2024年规模约为？",
+      "options": ["100+亿", "200+亿", "500+亿", "1000+亿"],
+      "correctIndex": 2,
+      "explanation": "AI金融市场规模约500+亿元，是AI医疗的2.5倍。智能风控是最大细分市场。"
+    },
+    {
+      "question": "金融AI中渗透率最高的场景是？",
+      "options": ["量化交易", "智能投顾", "智能风控", "AI客服"],
+      "correctIndex": 2,
+      "explanation": "智能风控是金融AI渗透率最高的场景，几乎所有主要银行和互金平台均已部署AI风控系统。"
+    },
+    {
+      "question": "金融AI产品面临的最大挑战不包括？",
+      "options": ["数据安全合规", "AI决策可解释性", "三类证审批", "监管信任"],
+      "correctIndex": 2,
+      "explanation": "三类证是医疗AI特有的挑战，金融AI不需要医疗器械审批。金融AI的挑战主要集中在合规、可解释性和信任层面。"
+    }
+  ],
+  "compareData": {
+    "market": "500+亿",
+    "cagr": "30%",
+    "cr5": "45%",
+    "stage": "成长中后期",
+    "aiPenetration": "高",
+    "barrier": "高（牌照+合规）",
+    "salesCycle": "3-9个月",
+    "topPlayers": "蚂蚁/腾讯/百度",
+    "strength": "市场大、模式成熟",
+    "weakness": "竞争激烈、监管趋严"
+  },
+  "sources": [
+    "弗若斯特沙利文《中国AI金融市场报告2024》",
+    "亿欧智库《2024中国AI金融科技产业研究报告》",
+    "麦肯锡《中国金融业AI应用报告2024》",
+    "银保监会公开数据",
+    "公开财务报告及行业访谈"
+  ]
+}

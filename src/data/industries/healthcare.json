@@ -1,0 +1,215 @@
+{
+  "slug": "healthcare",
+  "name": "AI + 医疗健康",
+  "aliases": ["AI医疗", "智慧医疗", "数字医疗"],
+  "emoji": "🏥",
+  "oneLiner": "AI医疗是运用人工智能技术赋能疾病筛查、诊断、治疗、药物研发和健康管理的交叉领域，正处于从「辅助工具」向「核心生产力」跃迁的关键期。",
+  "stage": "growth",
+  "heroDeck": "从辅助工具到核心生产力，AI 正在重塑医疗的每一个环节",
+  "heroHook": "200 亿市场 × 40% 增速 × 70+ 三类证 — 这是 AI 商业化最扎实的赛道之一",
+  "tags": [
+    { "label": "热门", "variant": "hot" },
+    { "label": "200+亿市场" },
+    { "label": "40% CAGR" }
+  ],
+  "searchKeywords": ["医疗", "健康", "AI医疗", "影像", "诊断", "药物", "医院"],
+  "headlineMetrics": [
+    {
+      "label": "市场规模 (2024)",
+      "value": "200+",
+      "unit": "亿",
+      "year": 2024,
+      "growthRate": 0.40,
+      "trend": "up",
+      "source": "弗若斯特沙利文",
+      "insight": "中国AI医疗市场在2024年突破200亿元，年复合增长率高达40%，是全球增速最快的AI医疗市场之一。政策支持、临床需求和技术成熟度三重驱动。"
+    },
+    {
+      "label": "年复合增速 CAGR",
+      "value": "40",
+      "unit": "%",
+      "year": 2024,
+      "trend": "up",
+      "source": "亿欧智库",
+      "insight": "40%年复合增速远超全球医疗IT平均增速(约15%)，AI医疗正处于从早期采用者向主流市场跨越的拐点，预计2027年市场规模将突破500亿元。"
+    },
+    {
+      "label": "市场集中度 CR5",
+      "value": "35",
+      "unit": "%",
+      "year": 2024,
+      "trend": "flat",
+      "source": "公开资料整理",
+      "insight": "CR5约35%，市场集中度中等偏低，尚未出现绝对垄断者。互联网巨头、传统器械龙头、AI创业公司三股力量共同竞争，格局仍在演变中。"
+    },
+    {
+      "label": "三类证获批",
+      "value": "70+",
+      "year": 2024,
+      "trend": "up",
+      "source": "NMPA",
+      "insight": "截至2024年底，NMPA已批准70+张AI医疗器械三类证，其中AI影像辅助诊断类占比超过80%。三类证是医疗AI商业化的关键准入壁垒。"
+    },
+    {
+      "label": "三级医院渗透率",
+      "value": "≈35",
+      "unit": "%",
+      "year": 2024,
+      "trend": "up",
+      "source": "CHIMA调研",
+      "insight": "全国三级医院中约35%已引入至少一款AI辅助诊断产品，主要集中在影像科。随着基层医疗AI需求释放，渗透率有望在未来3年提升至60%以上。"
+    }
+  ],
+  "valueChain": {
+    "upstream": {
+      "name": "上游 — 基础设施层",
+      "aiPenetration": "high",
+      "nodes": [
+        { "name": "医疗数据（电子病历/影像/基因）", "valueShare": 15, "marginRange": [30, 60] },
+        { "name": "AI 算力（GPU 集群/云计算）", "valueShare": 10, "marginRange": [25, 35] },
+        { "name": "AI 算法框架（深度学习/大模型）", "valueShare": 10, "marginRange": [50, 60] }
+      ]
+    },
+    "midstream": {
+      "name": "中游 — 技术平台层",
+      "aiPenetration": "very_high",
+      "nodes": [
+        { "name": "AI 影像分析平台（CT/MRI/病理）", "valueShare": 25, "marginRange": [55, 70] },
+        { "name": "AI 辅助诊断系统（CDSS）", "valueShare": 10, "marginRange": [40, 55] },
+        { "name": "AI 药物研发平台（靶点/分子设计）", "valueShare": 15, "marginRange": [60, 75] },
+        { "name": "AI 健康管理（可穿戴+干预）", "valueShare": 5, "marginRange": [35, 50] }
+      ]
+    },
+    "downstream": {
+      "name": "下游 — 应用服务层",
+      "aiPenetration": "medium",
+      "nodes": [
+        { "name": "医院/诊所（影像科/病理科）", "valueShare": 40, "marginRange": [15, 25] },
+        { "name": "药企（研发外包/临床）", "valueShare": 20, "marginRange": [40, 55] },
+        { "name": "保险/医保（理赔/风控）", "valueShare": 8, "marginRange": [30, 45] },
+        { "name": "患者/消费者（健康管理）", "valueShare": 7, "marginRange": [50, 65] }
+      ]
+    }
+  },
+  "playerCategories": [
+    {
+      "category": "互联网巨头",
+      "players": [
+        { "name": "百度灵医智惠", "description": "CDSS + 眼底筛查 + 大模型「灵医」，AI 布局最系统" },
+        { "name": "腾讯觅影", "description": "影像 AI + 病理 AI + 患者服务，平台化打法" },
+        { "name": "阿里健康", "description": "医药电商 + AI 辅助，渠道优势突出" },
+        { "name": "京东健康", "description": "互联网医疗 + AI 分诊，用户规模领先" }
+      ]
+    },
+    {
+      "category": "传统龙头",
+      "players": [
+        { "name": "联影智能", "description": "影像设备 + AI（软硬一体），国产替代+AI双逻辑" },
+        { "name": "迈瑞医疗", "description": "监护+超声+IVD，AI 辅助诊断嵌入设备" }
+      ]
+    },
+    {
+      "category": "AI 创业新锐",
+      "players": [
+        { "name": "推想科技", "description": "肺结节/胸部 AI 影像，已获三类证" },
+        { "name": "数坤科技", "description": "心脑血管 AI，头部创业公司" },
+        { "name": "晶泰科技", "description": "AI 药物研发，港股上市" },
+        { "name": "鹰瞳科技", "description": "AI 视网膜筛查，港股上市" }
+      ]
+    },
+    {
+      "category": "隐形冠军",
+      "players": [
+        { "name": "安德医智", "description": "神经系统 AI 影像，细分领域领先" }
+      ]
+    }
+  ],
+  "aiOpportunities": [
+    { "title": "医学影像辅助诊断", "maturityScore": 4, "valueCeilingScore": 5, "verdict": "proven" },
+    { "title": "AI 药物研发", "maturityScore": 3, "valueCeilingScore": 5, "verdict": "pre-boom" },
+    { "title": "临床辅助决策 CDSS", "maturityScore": 3, "valueCeilingScore": 4, "verdict": "steady" },
+    { "title": "手术机器人", "maturityScore": 4, "valueCeilingScore": 4, "verdict": "scaling" },
+    { "title": "健康管理 / 慢病管理", "maturityScore": 3, "valueCeilingScore": 4, "verdict": "demand" },
+    { "title": "基因 + AI", "maturityScore": 2, "valueCeilingScore": 5, "verdict": "future" },
+    { "title": "医疗机器人（非手术）", "maturityScore": 3, "valueCeilingScore": 3, "verdict": "supplement" },
+    { "title": "AI 心理 / 精神健康", "maturityScore": 2, "valueCeilingScore": 4, "verdict": "blue-ocean" }
+  ],
+  "portersFive": [
+    { "force": "新进入者威胁", "intensity": 3, "rationale": "三类证壁垒高" },
+    { "force": "供应商议价", "intensity": 2, "rationale": "数据源分散" },
+    { "force": "买家议价", "intensity": 4, "rationale": "三甲医院强势" },
+    { "force": "替代品威胁", "intensity": 2, "rationale": "医生替代有限" },
+    { "force": "现有竞争", "intensity": 4, "rationale": "三股力量混战" }
+  ],
+  "trends": [
+    {
+      "title": "大模型重塑医疗 AI",
+      "body": "GPT-4 级模型在医学知识问答中已逼近执业医师水平。大模型的涌现能力使得多科室、多病种的通用 AI 诊断成为可能，从单一病灶检测走向全面临床推理。Med-PaLM 2 等专业医学大模型在 USMLE 考试中达到专家级分数，推动医疗 AI 从「专病专用」向「通用智能」演进。",
+      "callout": "产品设计思路需要从「单一任务高精度」转向「多任务协同」——如何在一个产品中覆盖影像、文本、结构化数据的融合分析，而非为每个场景单独建模型。"
+    },
+    {
+      "title": "从「AI 辅助」到「AI 原生」",
+      "body": "新一代 AI 药企（如晶泰科技、英矽智能）不再以传统实验为主导，而是以 AI 预测+计算模拟为核心工作流，大幅缩短药物研发周期（从 5–7 年压缩至 18–24 个月）。这种范式的变化正在倒逼传统药企组建 AI 团队或与 AI 公司深度合作。",
+      "callout": "理解「AI 原生」的工作流设计——不是给传统流程加 AI 模块，而是围绕 AI 能力重新设计端到端流程。需要同时理解药物研发 domain knowledge 和 AI 能力边界。"
+    },
+    {
+      "title": "出海加速：中国 AI 影像走向全球",
+      "body": "中国 AI 影像产品已进入东南亚、非洲和南美市场，凭借高性价比和丰富的临床验证数据获得认可。推想科技、数坤科技等企业已获得 CE 认证和 FDA 突破性器械认定，海外收入占比快速提升，成为第二增长曲线。",
+      "callout": "产品设计初期就要考虑多语言、多监管、多临床指南的适配架构。CE/FDA 认证路径、数据本地化要求、跨文化临床验证都需要纳入产品路线图。"
+    },
+    {
+      "title": "多模态融合：影像 + 文本 + 基因 + 病理",
+      "body": "单一模态的 AI 诊断正在向多模态融合演进——同时分析影像、电子病历文本、基因组数据和病理切片，给出综合诊断建议。这种「全数据」诊断模式更接近资深医师的真实决策过程，有望将诊断准确率从单模态的 85–90% 提升至 95% 以上。",
+      "callout": "多模态产品需要解决数据对齐、时序同步、模态权重分配等复杂的产品设计问题。不是简单地把多个模型拼在一起，而是设计一个「以患者为中心」的统一分析框架。"
+    },
+    {
+      "title": "支付端突破：AI 辅助诊断开始纳入医保",
+      "body": "部分地区已开始将 AI 辅助诊断纳入医保收费目录，标志着医疗 AI 从「医院自费采购」走向「医保支付」的商业模式闭环正在形成。DRG/DIP 支付改革也在倒逼医院提升效率，为 AI 降本增效产品创造了刚需场景。",
+      "callout": "商业模型设计不再只是「软件授权费」，需要理解医保定价逻辑、收费编码申请流程、以及如何证明 AI 产品的卫生经济学价值（省钱 or 增效的量化证据）。"
+    }
+  ],
+  "myths": [
+    { "myth": "「AI 要替代医生」", "reality": "5–10 年内 AI 都是辅助工具，提升效率而不是替代" },
+    { "myth": "「有算法就行」", "reality": "医疗 AI 的核心壁垒是临床数据和三类证，不是算法" },
+    { "myth": "「市场很大随便做」", "reality": "三甲医院渠道高度集中，销售壁垒极高" }
+  ],
+  "quiz": [
+    {
+      "question": "中国AI医疗市场规模在2024年约为多少？",
+      "options": ["50亿元", "100亿元", "200+亿元", "500亿元"],
+      "correctIndex": 2,
+      "explanation": "2024年中国AI医疗市场突破200亿元，年复合增长率高达40%，是全球增速最快的AI医疗市场之一。"
+    },
+    {
+      "question": "医疗AI商业化的关键准入壁垒是什么？",
+      "options": ["算法精度", "用户数量", "三类医疗器械注册证", "融资规模"],
+      "correctIndex": 2,
+      "explanation": "三类证是医疗AI的核心准入壁垒，审批周期通常需要18-36个月，涉及多中心临床试验和NMPA技术审评。"
+    },
+    {
+      "question": "以下哪家公司不属于「AI药物研发」赛道？",
+      "options": ["晶泰科技", "英矽智能", "推想科技", "深势科技"],
+      "correctIndex": 2,
+      "explanation": "推想科技专注于AI医学影像（肺结节/胸部CT），属于AI影像赛道，而非药物研发。晶泰科技、英矽智能、深势科技均以AI药物研发为核心。"
+    }
+  ],
+  "compareData": {
+    "market": "200+亿",
+    "cagr": "40%",
+    "cr5": "35%",
+    "stage": "成长中期",
+    "aiPenetration": "中高",
+    "barrier": "极高（三类证）",
+    "salesCycle": "6-18个月",
+    "topPlayers": "百度灵医/联影/推想",
+    "strength": "壁垒高、天花板高",
+    "weakness": "销售周期长、监管严"
+  },
+  "sources": [
+    "弗若斯特沙利文《中国AI医疗市场报告2024》",
+    "亿欧智库《2024中国AI医疗产业研究报告》",
+    "NMPA公开数据",
+    "CHIMA年度调研",
+    "公开财务报告及行业访谈"
+  ]
+}

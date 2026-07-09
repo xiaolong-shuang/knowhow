@@ -1,0 +1,158 @@
+{
+  "slug": "education",
+  "name": "AI + 教育",
+  "aliases": ["AI教育", "智慧教育", "教育科技"],
+  "emoji": "📚",
+  "oneLiner": "AI教育通过自适应学习、智能批改和虚拟教师等技术，正在改变「千人一面」的传统教学模式，实现真正的个性化教育。",
+  "stage": "growth",
+  "heroDeck": "个性化学习路径、智能批改、虚拟教师——教育的AI变革正在发生",
+  "heroHook": "150亿市场 × 25%增速 — AI让因材施教从理想走向现实",
+  "tags": [
+    { "label": "150+亿市场" },
+    { "label": "25% CAGR" }
+  ],
+  "searchKeywords": ["教育", "AI教育", "自适应学习", "智慧课堂", "教育科技", "培训"],
+  "headlineMetrics": [
+    { "label": "市场规模 (2024)", "value": "150+", "unit": "亿", "year": 2024, "trend": "up", "source": "弗若斯特沙利文", "insight": "中国AI教育市场在2024年突破150亿元，K12自适应学习和语言学习是最大两个细分市场。" },
+    { "label": "年复合增速 CAGR", "value": "25", "unit": "%", "year": 2024, "trend": "up", "source": "亿欧智库", "insight": "AI教育市场增速稳定在25%左右，受「双减」政策影响，学科培训赛道转型，素质教育+AI成为新增长点。" },
+    { "label": "市场集中度 CR5", "value": "30", "unit": "%", "year": 2024, "trend": "flat", "source": "公开资料整理", "insight": "CR5约30%，市场分散度高。好未来、科大讯飞、作业帮三强领跑，但区域性和细分赛道仍有大量机会。" },
+    { "label": "AI渗透率", "value": "25", "unit": "%", "year": 2024, "trend": "up", "source": "教育部调研", "insight": "全国中小学中约25%已使用至少一款AI教育工具，主要集中在英语口语评测和数学自适应练习。预计2027年将超过50%。" },
+    { "label": "付费用户规模", "value": "5000+", "unit": "万", "year": 2024, "trend": "up", "source": "QuestMobile", "insight": "AI教育产品的月活用户已突破5000万，但付费转化率仅5-8%，商业模式从C端付费向B端(学校/教育局)采购迁移。" }
+  ],
+  "valueChain": {
+    "upstream": {
+      "name": "上游 — 内容与技术基础设施",
+      "aiPenetration": "medium",
+      "nodes": [
+        { "name": "教育内容（课标/题库/知识点图谱）", "valueShare": 20, "marginRange": [25, 40] },
+        { "name": "AI 基础能力（语音识别/NLP/CV）", "valueShare": 15, "marginRange": [50, 70] },
+        { "name": "云计算与硬件（拍搜/口语评测）", "valueShare": 10, "marginRange": [15, 30] }
+      ]
+    },
+    "midstream": {
+      "name": "中游 — 教育AI平台",
+      "aiPenetration": "high",
+      "nodes": [
+        { "name": "自适应学习引擎", "valueShare": 25, "marginRange": [60, 75] },
+        { "name": "AI 批改与评测系统", "valueShare": 15, "marginRange": [50, 65] },
+        { "name": "虚拟教师/智能辅导", "valueShare": 10, "marginRange": [45, 60] },
+        { "name": "智慧课堂解决方案", "valueShare": 10, "marginRange": [35, 50] }
+      ]
+    },
+    "downstream": {
+      "name": "下游 — 教育服务与应用",
+      "aiPenetration": "medium",
+      "nodes": [
+        { "name": "K12学校（课堂+作业+考试）", "valueShare": 35, "marginRange": [15, 30] },
+        { "name": "语言培训（英语口语/写作）", "valueShare": 20, "marginRange": [40, 60] },
+        { "name": "职业教育（技能培训/考证）", "valueShare": 15, "marginRange": [30, 50] },
+        { "name": "企业培训（LMS + AI教练）", "valueShare": 10, "marginRange": [35, 55] }
+      ]
+    }
+  },
+  "playerCategories": [
+    {
+      "category": "教育科技龙头",
+      "players": [
+        { "name": "好未来（学而思）", "description": "自研MathGPT数学大模型，自适应学习平台「学而思网校」覆盖千万用户" },
+        { "name": "科大讯飞", "description": "语音评测+智能批改技术领先，智慧课堂覆盖数万所学校" },
+        { "name": "作业帮", "description": "AI拍搜+题库+直播课一体化，用户规模和题库量为行业第一" }
+      ]
+    },
+    {
+      "category": "互联网跨界",
+      "players": [
+        { "name": "腾讯教育", "description": "腾讯云+AI能力+生态，提供智慧校园整体解决方案" },
+        { "name": "字节跳动（大力教育）", "description": "AI算法优势+产品基因，教育硬件(大力智能灯)+在线课程双线布局" }
+      ]
+    },
+    {
+      "category": "AI 创业新锐",
+      "players": [
+        { "name": "松鼠AI", "description": "自适应学习系统先行者，知识点级纳米级拆分+AI动态路径规划" },
+        { "name": "流利说", "description": "AI英语口语评测标杆，自研语音识别+打分引擎" }
+      ]
+    },
+    {
+      "category": "内容/IP 驱动",
+      "players": [
+        { "name": "网易有道", "description": "AI词典笔硬件+有道精品课，软硬一体布局" }
+      ]
+    }
+  ],
+  "aiOpportunities": [
+    { "title": "自适应学习引擎", "maturityScore": 3, "valueCeilingScore": 5, "verdict": "pre-boom" },
+    { "title": "AI 作文批改与反馈", "maturityScore": 4, "valueCeilingScore": 4, "verdict": "scaling" },
+    { "title": "虚拟教师 / AI 辅导", "maturityScore": 2, "valueCeilingScore": 5, "verdict": "blue-ocean" },
+    { "title": "教育大模型（MathGPT等）", "maturityScore": 2, "valueCeilingScore": 5, "verdict": "pre-boom" },
+    { "title": "AI 口语评测", "maturityScore": 5, "valueCeilingScore": 3, "verdict": "proven" },
+    { "title": "智能组卷与学情分析", "maturityScore": 4, "valueCeilingScore": 3, "verdict": "steady" }
+  ],
+  "portersFive": [
+    { "force": "新进入者威胁", "intensity": 3, "rationale": "内容+渠道壁垒中高" },
+    { "force": "供应商议价", "intensity": 2, "rationale": "AI能力供给充足" },
+    { "force": "买家议价", "intensity": 4, "rationale": "教育局/学校集中采购" },
+    { "force": "替代品威胁", "intensity": 3, "rationale": "传统教培仍有市场" },
+    { "force": "现有竞争", "intensity": 4, "rationale": "多方混战" }
+  ],
+  "trends": [
+    {
+      "title": "教育大模型元年",
+      "body": "好未来MathGPT、科大讯飞星火教育版等垂直大模型的出现，标志着教育AI从「弱AI」（单任务）向「强AI」（多任务理解）的跨越。数学推理、作文批改、学情分析等场景正在被大模型重塑。",
+      "callout": "教育大模型需要领域知识+教育心理学+教学法的三重融合，不是通用模型的简单微调。AI PM需要理解教育学domain knowledge才能设计出真正有用的产品。"
+    },
+    {
+      "title": "B2B 模式加速，从 C 端到 G 端",
+      "body": "「双减」政策改变了教育市场格局，学校成为AI教育产品的最大采购方。智慧课堂、AI作业批改系统、学情分析平台正加速进入公立学校体系。",
+      "callout": "B2G/B2B销售周期长（6-18个月），需要政府关系+试点的双重能力。产品设计上要兼顾「给教育局看的管理价值」和「给老师用的教学价值」。"
+    },
+    {
+      "title": "AI 硬件：学习机市场爆发",
+      "body": "搭载AI大模型的学习机/词典笔/智能灯等硬件产品在2024年迎来爆发，好未来、科大讯飞、百度、网易有道等纷纷布局。AI能力成为学习机从「平板电脑+题库」升级为「个性化AI教师」的关键。",
+      "callout": "软硬一体的产品设计需要同时考虑工业设计、供应链、AI模型端侧部署（NPU优化）、以及OTA内容更新——这是一个全新的产品复杂度级别。"
+    }
+  ],
+  "myths": [
+    { "myth": "「AI可以完全替代老师」", "reality": "教育的本质是人与人的互动，AI是工具而非替代品——它能处理知识传递，但无法替代情感连接和人格影响。" },
+    { "myth": "「自适应学习就是刷题系统」", "reality": "真正的自适应学习是基于认知模型和知识图谱的动态路径规划，不是简单按难度排序。" },
+    { "myth": "「教育科技不需要懂教育」", "reality": "不懂教育心理学、课程标准和学习科学的AI PM做出来的产品，往往「技术上可行但教学上无用」。" }
+  ],
+  "quiz": [
+    {
+      "question": "中国AI教育市场年复合增速约为？",
+      "options": ["10%", "25%", "50%", "75%"],
+      "correctIndex": 1,
+      "explanation": "AI教育市场年复合增速约为25%，虽然低于医疗(40%)，但用户基数巨大，K12+语言学习+职业教育三大市场均保持快速增长。"
+    },
+    {
+      "question": "以下哪项不是AI教育的核心应用场景？",
+      "options": ["自适应学习", "AI作文批改", "手术导航", "虚拟教师"],
+      "correctIndex": 2,
+      "explanation": "手术导航属于AI医疗领域，其余三项均为AI教育的核心应用场景。"
+    },
+    {
+      "question": "教育AI产品的主要商业模式正在转向？",
+      "options": ["C端付费订阅", "B端/学校采购", "广告变现", "硬件免费+内容收费"],
+      "correctIndex": 1,
+      "explanation": "受「双减」政策和市场变化影响，AI教育产品的主流商业模式正在从C端付费订阅向B端/学校采购迁移。智慧课堂和AI作业系统已成为最大收入来源。"
+    }
+  ],
+  "compareData": {
+    "market": "150+亿",
+    "cagr": "25%",
+    "cr5": "30%",
+    "stage": "成长早期",
+    "aiPenetration": "中",
+    "barrier": "中高（渠道+内容）",
+    "salesCycle": "6-18个月",
+    "topPlayers": "好未来/科大讯飞/作业帮",
+    "strength": "用户基数巨大、政策利好",
+    "weakness": "付费转化率低、B端决策周期长"
+  },
+  "sources": [
+    "弗若斯特沙利文《中国AI教育市场报告2024》",
+    "亿欧智库《2024中国AI教育产业研究报告》",
+    "教育部公开数据",
+    "QuestMobile行业报告"
+  ]
+}
