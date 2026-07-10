@@ -73,6 +73,7 @@ JSON结构如下（注：★★★ 标记的板块如果token不足可以缩短�
 2. 结论有判断力，不要"取决于""需要观察""既有利也有弊"这类安全措辞
 3. 每个板块都要回答"这对AI产品经理意味着什么"
 4. 《经济学人》风格：精炼、锐利、信息密度高
+5. 输出总量控制在12000 tokens以内。每个描述字段（insight/rationale/body/callout/description/explanation）不超过30字。如空间不足优先保证JSON结构完整 — 宁可描述短也不要让JSON被截断
 
 ──────────────────────────────
 
@@ -166,7 +167,234 @@ function parseJSONFromLLM(raw: string): any {
   }
   try { return JSON.parse(fixed) } catch {}
 
+  // Layer 5: truncation repair — close unclosed braces/brackets/quotes
+  if (firstBrace >= 0) {
+    let repaired = raw.slice(firstBrace)
+    repaired = repaired.replace(/,\s*}/g, '}').replace(/,\s*]/g, ']')
+
+    // Count unclosed structures
+    let braceDepth = 0, bracketDepth = 0, inString = false, escapeNext = false
+    for (const ch of repaired) {
+      if (escapeNext) { escapeNext = false; continue }
+      if (ch === '\\') { escapeNext = true; continue }
+      if (ch === '"') { inString = !inString; continue }
+      if (inString) continue
+      if (ch === '{') braceDepth++
+      else if (ch === '}') braceDepth--
+      else if (ch === '[') bracketDepth++
+      else if (ch === ']') bracketDepth--
+    }
+
+    // Close any hanging string
+    if (inString) repaired += '"'
+
+    // Close remaining arrays then objects (inside-out)
+    repaired += ']'.repeat(Math.max(0, bracketDepth))
+    repaired += '}'.repeat(Math.max(0, braceDepth))
+
+    try { return JSON.parse(repaired) } catch {}
+  }
+
+  // Diagnostic
+  console.error('[analyze] JSON parse failed after 5 layers. Raw length:', raw.length)
+  console.error('[analyze] First 300 chars:', raw.slice(0, 300))
+  console.error('[analyze] Last 300 chars:', raw.slice(-300))
+
   throw new Error('Unable to parse JSON from LLM response')
+}
+
+// Layer 6: regex-based field extraction when JSON is structurally broken
+// Recovers as many fields as possible from raw LLM output
+function extractFieldsFromRaw(raw: string, industry: string): any {
+  const ext = (key: string) => {
+    const re = new RegExp(`"${key}"\\s*:\\s*"([^"]*)"`, 'i')
+    return raw.match(re)?.[1] ?? raw.match(new RegExp(`"${key}"\\s*:\\s*(.+?)[,}\\n]`, 'i'))?.[1]?.replace(/["]/g, '')?.trim() ?? ''
+  }
+  const extNum = (key: string, fallback: number) => {
+    const m = raw.match(new RegExp(`"${key}"\\s*:\\s*([0-9.]+)`))
+    return m ? parseFloat(m[1]) : fallback
+  }
+  const extNumInObj = (search: string, key: string, fallback: number) => {
+    const m = raw.match(new RegExp(`"${search}"[^}]*"${key}"\\s*:\\s*([0-9.]+)`, 'i'))
+    return m ? parseFloat(m[1]) : fallback
+  }
+  const extArray = (key: string) => {
+    const start = raw.indexOf(`"${key}"`)
+    if (start < 0) return []
+    // Find the opening bracket
+    const bracketStart = raw.indexOf('[', start)
+    if (bracketStart < 0 || bracketStart - start > 100) return []
+    // Try to extract each string element from the array
+    const results: string[] = []
+    const re = /"([^"]+)"/g
+    const section = raw.slice(bracketStart, bracketStart + 2000)
+    let match
+    while ((match = re.exec(section)) !== null) {
+      if (!['label','value','unit','year','trend','source','growthRate'].includes(match[1]) && match[1].length > 1) {
+        results.push(match[1])
+      }
+    }
+    return results
+  }
+
+  const vc = (layer: string) => {
+    const re = new RegExp(`"${layer}"\\s*:\\s*\\{"name"\\s*:\\s*"([^"]*)"`, 'i')
+    return re.exec(raw)?.[1] ?? ''
+  }
+
+  // Extract headline metrics as an array of partial objects
+  const metricsSection = raw.match(/"headlineMetrics"\s*:\s*\[([\s\S]*?)\]/)
+  const metrics: any[] = []
+  if (metricsSection) {
+    const metricBlocks = metricsSection[1].split(/\},\s*\{/)
+    for (const block of metricBlocks.slice(0, 5)) {
+      const m = (k: string) => block.match(new RegExp(`"${k}"\\s*:\\s*"([^"]*)"`))?.[1] ?? ''
+      const mNum = (k: string) => parseFloat(block.match(new RegExp(`"${k}"\\s*:\\s*([0-9.]+)`))?.[1] ?? '0')
+      metrics.push({
+        label: m('label'),
+        value: m('value') || (block.match(/"value"\s*:\s*([^,}\n]+)/)?.[1]?.replace(/"/g,'').trim() ?? ''),
+        unit: m('unit'),
+        year: mNum('year') || 2024,
+        growthRate: mNum('growthRate') || undefined,
+        trend: (block.match(/"trend"\s*:\s*"(up|down|flat)"/)?.[1]) as string || 'flat',
+        source: m('source'),
+        insight: m('insight'),
+      })
+    }
+  }
+
+  // Extract players from broken playerCategories
+  const playersSection = raw.match(/"playerCategories"\s*:\s*\[([\s\S]*?)\]/)
+  const playerCats: any[] = [
+    { category: '巨头/平台型', players: [] },
+    { category: '垂直领域龙头', players: [] },
+    { category: 'AI创业新锐', players: [] },
+    { category: '隐形冠军', players: [] },
+  ]
+  if (playersSection) {
+    const catRe = /"category"\s*:\s*"([^"]+)"/g
+    const cats = Array.from(playersSection[1].matchAll(catRe), m => m[1])
+    for (let ci = 0; ci < Math.min(cats.length, 4); ci++) {
+      const catStart = playersSection[1].indexOf(cats[ci])
+      const catSlice = playersSection[1].slice(catStart, catStart + 800)
+      const nameRe = /"name"\s*:\s*"([^"]+)"/g
+      const descRe = /"description"\s*:\s*"([^"]*)"/g
+      const names = Array.from(catSlice.matchAll(nameRe), m => m[1])
+      const descs = Array.from(catSlice.matchAll(descRe), m => m[1])
+      playerCats[ci] = {
+        category: cats[ci],
+        players: names.slice(0, 3).map((n, j) => ({ name: n, description: descs[j] ?? '' })),
+      }
+    }
+  }
+
+  // Extract aiOpportunities — at least get titles even if structure is broken
+  const oppsSection = raw.match(/"aiOpportunities"\s*:\s*\[([\s\S]*?)\]/)
+  const opportunities: any[] = []
+  if (oppsSection) {
+    const titleRe = /"title"\s*:\s*"([^"]+)"/g
+    const matRe = /"maturityScore"\s*:\s*(\d)/g
+    const ceilRe = /"valueCeilingScore"\s*:\s*(\d)/g
+    const verdRe = /"verdict"\s*:\s*"([^"]+)"/g
+    const titles = Array.from(oppsSection[1].matchAll(titleRe), m => m[1])
+    const mats = Array.from(oppsSection[1].matchAll(matRe), m => parseInt(m[1]))
+    const ceils = Array.from(oppsSection[1].matchAll(ceilRe), m => parseInt(m[1]))
+    const verds = Array.from(oppsSection[1].matchAll(verdRe), m => m[1])
+    for (let j = 0; j < Math.min(titles.length, 5); j++) {
+      opportunities.push({
+        title: titles[j],
+        maturityScore: mats[j] ?? 3,
+        valueCeilingScore: ceils[j] ?? 3,
+        verdict: verds[j] ?? 'steady',
+      })
+    }
+  }
+
+  // Extract trends
+  const trendsSection = raw.match(/"trends"\s*:\s*\[([\s\S]*?)\]/)
+  const trends: any[] = []
+  if (trendsSection) {
+    const titleRe = /"title"\s*:\s*"([^"]+)"/g
+    const bodyRe = /"body"\s*:\s*"([^"]*)"/g
+    const callRe = /"callout"\s*:\s*"([^"]*)"/g
+    const titles = Array.from(trendsSection[1].matchAll(titleRe), m => m[1])
+    const bodies = Array.from(trendsSection[1].matchAll(bodyRe), m => m[1])
+    const calls = Array.from(trendsSection[1].matchAll(callRe), m => m[1])
+    for (let j = 0; j < Math.min(titles.length, 3); j++) {
+      trends.push({ title: titles[j], body: bodies[j] ?? '', callout: calls[j] ?? '' })
+    }
+  }
+
+  // Extract myths
+  const mythsSection = raw.match(/"myths"\s*:\s*\[([\s\S]*?)\]/)
+  const myths: any[] = []
+  if (mythsSection) {
+    const mythRe = /"myth"\s*:\s*"([^"]+)"/g
+    const realRe = /"reality"\s*:\s*"([^"]+)"/g
+    const mythVals = Array.from(mythsSection[1].matchAll(mythRe), m => m[1])
+    const realVals = Array.from(mythsSection[1].matchAll(realRe), m => m[1])
+    for (let j = 0; j < Math.min(mythVals.length, 3); j++) {
+      myths.push({ myth: mythVals[j], reality: realVals[j] ?? '' })
+    }
+  }
+
+  // Extract quiz
+  const quizSection = raw.match(/"quiz"\s*:\s*\[([\s\S]*?)\]/)
+  const quiz: any[] = []
+  if (quizSection) {
+    const qRe = /"question"\s*:\s*"([^"]+)"/g
+    const explRe = /"explanation"\s*:\s*"([^"]*)"/g
+    const questions = Array.from(quizSection[1].matchAll(qRe), m => m[1])
+    const expls = Array.from(quizSection[1].matchAll(explRe), m => m[1])
+    for (let j = 0; j < Math.min(questions.length, 3); j++) {
+      quiz.push({ question: questions[j], options: ['A','B','C','D'], correctIndex: 0, explanation: expls[j] ?? '' })
+    }
+  }
+
+  return {
+    name: `AI + ${industry}`,
+    emoji: ext('emoji') || '📊',
+    oneLiner: ext('oneLiner') || `${industry}行业AI分析报告`,
+    stage: (ext('stage') && VALID_STAGES.includes(ext('stage'))) ? ext('stage') : 'growth',
+    heroDeck: ext('heroDeck') || `AI正在重塑${industry}`,
+    heroHook: ext('heroHook') || '',
+    tags: [{ label: `${industry}`, variant: 'hot' }],
+    headlineMetrics: metrics.length >= 3 ? metrics : [
+      { label: '市场规模', value: extNum('市场规模', 0).toString() || '—', unit: '', year: 2024, trend: 'flat' as const, source: '', insight: '' },
+      { label: 'CAGR', value: extNum('CAGR', 0).toString() || '—', unit: '%', year: 2024, trend: 'flat' as const, source: '', insight: '' },
+      { label: 'AI渗透率', value: '—', unit: '%', year: 2024, trend: 'flat' as const, source: '', insight: '' },
+      { label: '关键壁垒', value: '—', unit: '', year: 2024, trend: 'flat' as const, source: '', insight: '' },
+      { label: '头部市占率', value: '—', unit: '%', year: 2024, trend: 'flat' as const, source: '', insight: '' },
+    ],
+    valueChain: {
+      upstream:   { name: vc('upstream') || `上游 · ${industry}原材料`, aiPenetration: 'low', nodes: [] },
+      midstream:  { name: vc('midstream') || `中游 · ${industry}制造`, aiPenetration: 'medium', nodes: [] },
+      downstream: { name: vc('downstream') || `下游 · ${industry}应用`, aiPenetration: 'medium', nodes: [] },
+    },
+    playerCategories: playerCats,
+    aiOpportunities: opportunities,
+    portersFive: VALID_FORCES.map(f => ({ force: f, intensity: 3, rationale: '数据恢复模式 — 请重新搜索' })),
+    trends,
+    myths,
+    quiz,
+    compareData: { market: '-', cagr: '-', cr5: '-', stage: '-', aiPenetration: '-', barrier: '-', salesCycle: '-', topPlayers: '-', strength: '-', weakness: '-' },
+    sources: extractPlainSources(raw),
+  }
+}
+
+function extractPlainSources(raw: string): string[] {
+  const sources: string[] = []
+  const m = raw.match(/"sources"\s*:\s*\[([\s\S]*?)\]/)
+  if (!m) return ['⚠️ 部分数据已恢复，建议重新搜索']
+  const re = /"([^"]{3,80})"/g
+  let match
+  while ((match = re.exec(m[1])) !== null) {
+    if (!['label','value','unit','year','trend','source','growthRate','up','down','flat'].includes(match[1])) {
+      sources.push(match[1])
+    }
+    if (sources.length >= 6) break
+  }
+  return sources.length > 0 ? sources : ['⚠️ 部分数据已恢复，建议重新搜索']
 }
 
 function sanitizeSchema(raw: any): any {
@@ -282,6 +510,8 @@ function sanitizeSchema(raw: any): any {
 }
 
 export async function POST(req: Request) {
+  let full = '' // scoped outside try for catch-block access
+
   try {
     const { industry } = await req.json()
 
@@ -297,11 +527,10 @@ export async function POST(req: Request) {
       return Response.json({ data: fallback, fallback: true })
     }
 
+    // Collect full LLM response (stream internally, return all at once)
+    full = ''
     const systemPrompt = SYSTEM_PROMPT.replace(/\{industry\}/g, industry.trim())
     const userMessage = `请分析「${industry.trim()}」行业，输出完整的JSON报告。直接输出JSON，不要加任何解释。`
-
-    // Collect full LLM response (stream internally, return all at once)
-    let full = ''
 
     if (config.provider === 'anthropic') {
       const Anthropic = (await import('@anthropic-ai/sdk')).default
@@ -310,7 +539,7 @@ export async function POST(req: Request) {
         model: config.model,
         system: systemPrompt,
         messages: [{ role: 'user', content: userMessage }],
-        max_tokens: Math.max(config.maxTokens, 8192),
+        max_tokens: Math.max(config.maxTokens, 16384),
         stream: true,
       })
       for await (const event of stream) {
@@ -333,7 +562,7 @@ export async function POST(req: Request) {
             { role: 'system', content: systemPrompt },
             { role: 'user', content: userMessage },
           ],
-          max_tokens: Math.max(config.maxTokens, 8192),
+          max_tokens: Math.max(config.maxTokens, 16384),
           stream: true,
         }),
       })
@@ -374,9 +603,108 @@ export async function POST(req: Request) {
 
     return Response.json({ data })
   } catch (e: any) {
-    console.error('Analyze API error:', e)
+    console.error('[analyze] First attempt failed:', e.message)
 
-    // Last resort: return a minimal fallback structure
+    // ─── Layer 6: field-level extraction from broken JSON ─────
+    try {
+      const { industry } = await req.clone().json().catch(() => ({ industry: 'unknown' }))
+      const extracted = extractFieldsFromRaw(full ?? '', industry.trim())
+      const partial = sanitizeSchema(extracted)
+
+      // If we got real metrics, return the partially-recovered result
+      const hasRealData = partial.headlineMetrics?.some((m: any) => m.value && m.value !== '—' && m.value !== '0')
+      if (hasRealData) {
+        console.log('[analyze] Layer 6: recovered partial data via field extraction')
+        return Response.json({ data: partial, partialRecovery: true })
+      }
+    } catch { /* continue to retry */ }
+
+    // ─── Layer 7: retry with shortened prompt ─────────────────
+    try {
+      const { industry } = await req.clone().json().catch(() => ({ industry: 'unknown' }))
+      if (industry) {
+        console.log('[analyze] Layer 7: retrying with compact prompt for', industry)
+        const shortSystemPrompt = buildCompactPrompt(industry.trim())
+        const userMessage = `请分析「${industry.trim()}」行业，用精简格式输出JSON。`
+
+        const config = getLLMConfig()
+        let retryFull = ''
+
+        // Anthropic path
+        if (config.provider === 'anthropic') {
+          const Anthropic = (await import('@anthropic-ai/sdk')).default
+          const client = new Anthropic({ apiKey: config.apiKey })
+          const stream = await client.messages.create({
+            model: config.model,
+            system: shortSystemPrompt,
+            messages: [{ role: 'user', content: userMessage }],
+            max_tokens: Math.max(config.maxTokens, 8192),
+            stream: true,
+          })
+          for await (const event of stream) {
+            if (event.type === 'content_block_delta' && event.delta.type === 'text_delta') {
+              retryFull += event.delta.text
+            }
+          }
+        } else {
+          // OpenAI-compatible path
+          const res = await fetch(config.baseURL, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Authorization': `Bearer ${config.apiKey}`,
+              ...(config.extraHeaders ?? {}),
+            },
+            body: JSON.stringify({
+              model: config.model,
+              messages: [
+                { role: 'system', content: shortSystemPrompt },
+                { role: 'user', content: userMessage },
+              ],
+              max_tokens: Math.max(config.maxTokens, 16384),
+              stream: true,
+            }),
+          })
+
+          if (res.ok) {
+            const reader = res.body?.getReader()
+            if (reader) {
+              const decoder = new TextDecoder()
+              let buffer = ''
+              while (true) {
+                const { done, value } = await reader.read()
+                if (done) break
+                buffer += decoder.decode(value, { stream: true })
+                const lines = buffer.split('\n')
+                buffer = lines.pop() ?? ''
+                for (const line of lines) {
+                  const trimmed = line.trim()
+                  if (!trimmed || !trimmed.startsWith('data: ')) continue
+                  const data = trimmed.slice(6)
+                  if (data === '[DONE]') break
+                  try {
+                    const content = JSON.parse(data).choices?.[0]?.delta?.content
+                    if (content) retryFull += content
+                  } catch { /* skip */ }
+                }
+              }
+            }
+          }
+        }
+
+        // Try to parse retry response
+        if (retryFull) {
+          const retryParsed = parseJSONFromLLM(retryFull)
+          const retryData = sanitizeSchema(retryParsed)
+          console.log('[analyze] Layer 7: retry succeeded')
+          return Response.json({ data: retryData, retried: true })
+        }
+      }
+    } catch (retryErr: any) {
+      console.error('[analyze] Layer 7 retry also failed:', retryErr.message)
+    }
+
+    // ─── Last resort: empty fallback ──────────────────────────
     try {
       const { industry } = await req.clone().json().catch(() => ({ industry: 'unknown' }))
       return Response.json({ data: buildFallback(industry), fallback: true })
@@ -384,6 +712,47 @@ export async function POST(req: Request) {
       return Response.json({ error: e.message ?? 'Internal server error' }, { status: 500 })
     }
   }
+}
+
+// Layer 7 compact prompt: ~60% of original length, no quiz/compareData, minimal descriptions
+function buildCompactPrompt(industry: string): string {
+  return `你是一位行业分析顾问。分析「${industry}」行业，输出纯JSON（不要代码块，以{开头}结尾）。
+
+{
+  "name": "AI + ${industry}", "emoji": "📊", "oneLiner": "X字以内", "stage": "growth",
+  "heroDeck": "15字以内", "heroHook": "30字以内判断句",
+  "tags": [{"label": "标签", "variant": "hot"}],
+  "headlineMetrics": [
+    {"label":"市场规模","value":"数字","unit":"亿","year":2024,"growthRate":0.38,"trend":"up","source":"来源","insight":"一句话"}
+
+  ],
+  "valueChain": {
+    "upstream":{"name":"上游","aiPenetration":"low","nodes":[{"name":"环节","valueShare":30,"marginRange":[10,20]}]},
+    "midstream":{"name":"中游","aiPenetration":"medium","nodes":[]},
+    "downstream":{"name":"下游","aiPenetration":"high","nodes":[]}
+  },
+  "playerCategories": [
+    {"category":"巨头","players":[{"name":"公司","description":"差异化"}]},
+    {"category":"垂直龙头","players":[]},
+    {"category":"AI创业","players":[]},
+    {"category":"隐形冠军","players":[]}
+  ],
+  "aiOpportunities": [
+    {"title":"具体AI场景","maturityScore":3,"valueCeilingScore":4,"verdict":"scaling"}
+  ],
+  "portersFive": [
+    {"force":"新进入者威胁","intensity":3,"rationale":"理由"},
+    {"force":"供应商议价能力","intensity":3,"rationale":"理由"},
+    {"force":"买方议价能力","intensity":3,"rationale":"理由"},
+    {"force":"替代品威胁","intensity":3,"rationale":"理由"},
+    {"force":"现有竞争者强度","intensity":3,"rationale":"理由"}
+  ],
+  "trends":[{"title":"","body":"","callout":""}],
+  "myths":[{"myth":"","reality":""}],
+  "sources":["来源1","来源2"]
+}
+
+核心要求：1)指标恰好5个(市场规模/CAGR/集中度/壁垒/市占率) 2)五力恰好5个，force值精确 3)描述每项不超过20字 4)数字具体 5)输出小于6000 tokens`
 }
 
 function buildFallback(industry: string): any {
