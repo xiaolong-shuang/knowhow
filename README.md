@@ -34,7 +34,9 @@ pnpm install
 pnpm dev  # → http://localhost:3101
 ```
 
-**无需配置任何 API Key**——AI 自动降级为本地模拟，所有功能开箱即用。接入真实 LLM 获得完整体验（[配置说明](#配置-ai可选--支持多种-llm)）。
+**无需配置任何 API Key**——AI 自动降级为本地模拟，所有功能开箱即用。
+
+> 🚀 **[在线体验](https://knowhow-demo.vercel.app)** — 一键打开 Demo，无需安装（部署后生效）
 
 ---
 
