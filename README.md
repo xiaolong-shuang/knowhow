@@ -8,9 +8,9 @@
 
 <p align="center">
   <a href="https://github.com/xiaolong-shuang/knowhow/blob/main/LICENSE"><img src="https://img.shields.io/github/license/xiaolong-shuang/knowhow" alt="License"></a>
-  <a href="#"><img src="https://img.shields.io/badge/Next.js-16-black?logo=next.js" alt="Next.js 16"></a>
-  <a href="#"><img src="https://img.shields.io/badge/LLM-DeepSeek%20%7C%20Claude%20%7C%20GPT-4o-blue" alt="LLM"></a>
-  <a href="#"><img src="https://img.shields.io/badge/%E8%A7%A3%E6%9E%90%E6%88%90%E5%8A%9F%E7%8E%87-98%25-green" alt="解析成功率 98%"></a>
+  <img src="https://img.shields.io/badge/Next.js-16-black?logo=nextdotjs" alt="Next.js 16">
+  <img src="https://img.shields.io/badge/LLM-DeepSeek%20%7C%20Claude%20%7C%20GPT--4o-blue" alt="LLM">
+  <img src="https://img.shields.io/badge/parse--rate-98%25-green" alt="parse rate 98%">
 </p>
 
 ---
