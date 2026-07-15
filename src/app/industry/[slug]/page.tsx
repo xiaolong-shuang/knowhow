@@ -29,6 +29,12 @@ export async function generateMetadata({ params }: IndustryPageProps): Promise<M
     return {
       title: `${industry.emoji} ${industry.name} · KnowHow 行业深度`,
       description: industry.oneLiner,
+      openGraph: {
+        title: `${industry.name} · KnowHow 行业深度分析`,
+        description: industry.oneLiner,
+        type: 'article',
+        publishedTime: new Date().toISOString().split('T')[0],
+      },
     }
   } catch {
     return { title: '行业未找到 · KnowHow' }

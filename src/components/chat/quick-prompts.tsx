@@ -1,12 +1,15 @@
 'use client'
 
 import { useChatStore } from '@/stores/chat'
+import { getAnonymousId } from '@/lib/anonymous-id'
 
 interface QuickPromptsProps {
   prompts: string[]
+  /** 当前页面的行业上下文，从 ChatPanel 传入 */
+  industryContext?: string | null
 }
 
-export function QuickPrompts({ prompts }: QuickPromptsProps) {
+export function QuickPrompts({ prompts, industryContext }: QuickPromptsProps) {
   const addMessage = useChatStore((s) => s.addMessage)
   const setLoading = useChatStore((s) => s.setLoading)
   const setStreaming = useChatStore((s) => s.setStreaming)
@@ -21,10 +24,16 @@ export function QuickPrompts({ prompts }: QuickPromptsProps) {
     setStreaming(true)
 
     try {
+      const allMessages = useChatStore.getState().messages
       const res = await fetch('/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ question: text }),
+        body: JSON.stringify({
+          question: text,
+          history: allMessages.slice(-7, -1), // 最近 3 轮（6条）不含当前消息
+          industryContext: industryContext ?? undefined,
+          anonymousId: getAnonymousId(),
+        }),
       })
 
       const reader = res.body?.getReader()

@@ -1,0 +1,348 @@
+{
+  "name": "AI + 自动驾驶",
+  "emoji": "🔋",
+  "oneLiner": "L2+规模化落地，L4商业闭环尚在早期，行业从技术竞赛转向场景变现。",
+  "stage": "growth",
+  "heroDeck": "L2+成利润主战场",
+  "heroHook": "2024年L2+渗透率突破15%，千亿市场开启。",
+  "tags": [
+    {
+      "label": "2000+亿",
+      "variant": "hot"
+    },
+    {
+      "label": "L2+渗透15%",
+      "variant": "hot"
+    }
+  ],
+  "headlineMetrics": [
+    {
+      "label": "2024年中国自动驾驶市场规模(含ADAS)",
+      "value": "2300",
+      "unit": "亿",
+      "year": 2024,
+      "growthRate": 0.35,
+      "trend": "up",
+      "source": "沙利文《中国自动驾驶行业报告》",
+      "insight": "三年内或突破5000亿，L2+为增长主力。"
+    },
+    {
+      "label": "2020-2024年CAGR",
+      "value": "42",
+      "unit": "%",
+      "year": 2024,
+      "growthRate": 0.42,
+      "trend": "up",
+      "source": "中国汽车工业协会",
+      "insight": "高增速源于L2+车型量价齐升。"
+    },
+    {
+      "label": "L2+渗透率",
+      "value": "15",
+      "unit": "%",
+      "year": 2024,
+      "growthRate": 0.5,
+      "trend": "up",
+      "source": "乘联会",
+      "insight": "2025年有望达25%，燃油车渗透仍低。"
+    },
+    {
+      "label": "自动驾驶相关专利累计量",
+      "value": "6.5",
+      "unit": "万件",
+      "year": 2024,
+      "growthRate": 0.18,
+      "trend": "up",
+      "source": "国家知识产权局",
+      "insight": "华为、百度、比亚迪贡献超30%，壁垒高筑。"
+    },
+    {
+      "label": "头部企业L4测试里程(百度)",
+      "value": "9000",
+      "unit": "万公里",
+      "year": 2024,
+      "growthRate": 0.45,
+      "trend": "up",
+      "source": "百度Apollo",
+      "insight": "但仍不足支撑全无人运营，安全冗余待突破。"
+    }
+  ],
+  "valueChain": {
+    "upstream": {
+      "name": "上游 · 核心元器件",
+      "aiPenetration": "low",
+      "nodes": [
+        {
+          "name": "激光雷达",
+          "valueShare": 25,
+          "marginRange": [
+            20,
+            35
+          ]
+        },
+        {
+          "name": "毫米波雷达",
+          "valueShare": 10,
+          "marginRange": [
+            15,
+            25
+          ]
+        },
+        {
+          "name": "高精地图",
+          "valueShare": 8,
+          "marginRange": [
+            30,
+            50
+          ]
+        }
+      ]
+    },
+    "midstream": {
+      "name": "中游 · 方案集成与算法",
+      "aiPenetration": "high",
+      "nodes": [
+        {
+          "name": "ADAS方案",
+          "valueShare": 35,
+          "marginRange": [
+            25,
+            40
+          ]
+        },
+        {
+          "name": "AI芯片与计算平台",
+          "valueShare": 15,
+          "marginRange": [
+            30,
+            45
+          ]
+        }
+      ]
+    },
+    "downstream": {
+      "name": "下游 · 场景运营",
+      "aiPenetration": "medium",
+      "nodes": [
+        {
+          "name": "Robotaxi",
+          "valueShare": 5,
+          "marginRange": [
+            -10,
+            10
+          ]
+        },
+        {
+          "name": "商用车物流",
+          "valueShare": 2,
+          "marginRange": [
+            5,
+            15
+          ]
+        }
+      ]
+    }
+  },
+  "playerCategories": [
+    {
+      "category": "巨头/平台型",
+      "players": [
+        {
+          "name": "百度Apollo",
+          "description": "L4技术领先，萝卜快跑规模运营，高精地图壁垒。"
+        },
+        {
+          "name": "华为",
+          "description": "ADS方案上车，硬件+软件闭环，城市NCA领跑。"
+        },
+        {
+          "name": "谷歌Waymo",
+          "description": "L4技术全球标杆，商业化谨慎，事故率低。"
+        }
+      ]
+    },
+    {
+      "category": "垂直领域龙头",
+      "players": [
+        {
+          "name": "小鹏汽车",
+          "description": "XNGP全场景打通，城市NGP用户渗透率高。"
+        },
+        {
+          "name": "蔚来",
+          "description": "NOP+增强领航辅助，换电与硬件预埋策略。"
+        }
+      ]
+    },
+    {
+      "category": "AI创业新锐",
+      "players": [
+        {
+          "name": "Momenta",
+          "description": "数据驱动+飞轮迭代，量产方案获上汽投资。"
+        },
+        {
+          "name": "元戎启行",
+          "description": "L4轻地图方案，商用车与物流场景落地快。"
+        }
+      ]
+    },
+    {
+      "category": "隐形冠军",
+      "players": [
+        {
+          "name": "禾赛科技",
+          "description": "激光雷达市占率超30%，ADAS前装量产突破。"
+        },
+        {
+          "name": "地平线",
+          "description": "国产AI芯片龙头，征程系列出货破300万片。"
+        }
+      ]
+    }
+  ],
+  "aiOpportunities": [
+    {
+      "title": "AI驱动的城市NOA多模态感知",
+      "maturityScore": 4,
+      "valueCeilingScore": 4,
+      "verdict": "scaling"
+    },
+    {
+      "title": "AI仿真场景自动生成与边缘案例挖掘",
+      "maturityScore": 3,
+      "valueCeilingScore": 3,
+      "verdict": "demand"
+    },
+    {
+      "title": "AI车路协同动态决策优化",
+      "maturityScore": 2,
+      "valueCeilingScore": 4,
+      "verdict": "future"
+    },
+    {
+      "title": "AI驾驶员状态与行为监控预警",
+      "maturityScore": 4,
+      "valueCeilingScore": 3,
+      "verdict": "proven"
+    },
+    {
+      "title": "AI端到端模型（感知-规划-控制一体化）",
+      "maturityScore": 3,
+      "valueCeilingScore": 5,
+      "verdict": "blue-ocean"
+    }
+  ],
+  "portersFive": [
+    {
+      "force": "新进入者威胁",
+      "intensity": 4,
+      "rationale": "技术门槛极高，但车企自研与科技巨头跨界涌入，算力与数据壁垒高。"
+    },
+    {
+      "force": "供应商议价能力",
+      "intensity": 3,
+      "rationale": "核心芯片、激光雷达海外供应商集中，国产替代加速但仍受限。"
+    },
+    {
+      "force": "买方议价能力",
+      "intensity": 2,
+      "rationale": "消费者对L2+付费意愿上升，但整车厂采购时对价格敏感度中等。"
+    },
+    {
+      "force": "替代品威胁",
+      "intensity": 1,
+      "rationale": "人工驾驶为唯一替代，但自动驾驶不可逆趋势强，替代风险低。"
+    },
+    {
+      "force": "现有竞争者强度",
+      "intensity": 5,
+      "rationale": "百度、华为、小鹏等激烈争夺L2+装车率，价格战与功能战白热化。"
+    }
+  ],
+  "trends": [
+    {
+      "title": "城市NOA从选配变标配",
+      "body": "2024年超过15个品牌推送城市领航辅助，明年或覆盖30城以上。消费者购车时将其列为前三考量，倒逼车企全面内卷。",
+      "callout": "AI PM需聚焦城市长尾场景的模型泛化能力，提升可通行率。"
+    },
+    {
+      "title": "去高精地图方案成主流",
+      "body": "多家厂商转向重感知轻地图路线，以降低图商依赖和更新成本。但决策可靠性仍待验证。",
+      "callout": "AI PM应投入在线语义建图与实时推理技术，减少地图维护负担。"
+    },
+    {
+      "title": "端到端大模型革新架构",
+      "body": "特斯拉、华为等探索感知决策一体化网络，替代传统模块化流程。训练挑战与可解释性问题并存。",
+      "callout": "AI PM需掌握数据闭环与仿真验证工具，确保大模型可迭代可信。"
+    }
+  ],
+  "myths": [
+    {
+      "myth": "自动驾驶已经可以完全无人化",
+      "reality": "L4仅在小范围测试区运营，L2+仍是主流，全无人面临法规与长尾难题。"
+    },
+    {
+      "myth": "激光雷达是自动驾驶必备",
+      "reality": "纯视觉方案（如特斯拉）证明无激光雷达也可实现L2+，但激光雷达提升安全冗余。"
+    },
+    {
+      "myth": "自动驾驶只需解决算法",
+      "reality": "硬件、芯片、线控底盘、高精定位、法规保险缺一不可，系统工程挑战大。"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "L2+自动驾驶的核心区别主要在于？",
+      "options": [
+        "A. 完全脱手",
+        "B. 城市领航辅助功能",
+        "C. 不需要地图",
+        "D. 事故责任归车企"
+      ],
+      "correctIndex": 1,
+      "explanation": "L2+指在限定场景下实现城市NOA等高级辅助驾驶功能，但仍需驾驶员监控。依据来自L2与L3等级划分。"
+    },
+    {
+      "question": "以下哪个不是当前自动驾驶落地的主要瓶颈？",
+      "options": [
+        "A. 传感器成本",
+        "B. 算法长尾场景",
+        "C. 芯片算力过剩",
+        "D. 法规与保险缺失"
+      ],
+      "correctIndex": 2,
+      "explanation": "芯片算力并非瓶颈，实际挑战是低功耗下实时推理和算法可靠性。依据行业现状。"
+    },
+    {
+      "question": "去高精地图方案的最大优势是？",
+      "options": [
+        "A. 定位更准",
+        "B. 降低运维成本",
+        "C. 减少数据依赖",
+        "D. 提升规划能力"
+      ],
+      "correctIndex": 1,
+      "explanation": "减少对高精地图实时更新的依赖，大幅降低运营成本。依据趋势分析。"
+    }
+  ],
+  "compareData": {
+    "market": "2300亿人民币",
+    "cagr": "42%",
+    "cr5": "华为、百度、小鹏、蔚来、特斯拉占据约65%市场",
+    "stage": "成长后期",
+    "aiPenetration": "高（核心环节均依赖AI算法）",
+    "barrier": "专利壁垒、海量路测数据、芯片与激光雷达供应链",
+    "salesCycle": "Tier1供货周期12-18月，前装车型量产需2-3年",
+    "topPlayers": "百度、华为、小鹏、Waymo",
+    "strength": "中国市场政策积极、数据规模大、L2+渗透增长快",
+    "weakness": "L4商业化瓶颈、盈利模式不清、供应链本地化不足"
+  },
+  "sources": [
+    "沙利文《中国自动驾驶行业报告2024》",
+    "中国汽车工业协会《自动驾驶发展白皮书》",
+    "国家知识产权局《自动驾驶专利统计报告》",
+    "乘联会《智能网联汽车月度销量数据》"
+  ],
+  "slug": "autonomous-driving"
+}

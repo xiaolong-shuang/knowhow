@@ -1,0 +1,336 @@
+{
+  "name": "AI + 新能源",
+  "emoji": "⚡",
+  "oneLiner": "AI赋能新能源发电、储能与电网，实现预测、调度与运维的全链路智能化",
+  "stage": "growth",
+  "heroDeck": "绿电智能化的新引擎",
+  "heroHook": "2026年全球AI+新能源市场将突破600亿",
+  "tags": [
+    {
+      "label": "500+亿",
+      "variant": "hot"
+    },
+    {
+      "label": "CAGR 30%",
+      "variant": "new"
+    }
+  ],
+  "headlineMetrics": [
+    {
+      "label": "2024年全球AI+新能源市场规模",
+      "value": "280",
+      "unit": "亿",
+      "year": 2024,
+      "growthRate": 0.3,
+      "trend": "up",
+      "source": "IEA",
+      "insight": "光伏与储能预测是最大细分"
+    },
+    {
+      "label": "2020-2024全球AI+新能源复合增速",
+      "value": "35%",
+      "unit": "%",
+      "year": 2024,
+      "growthRate": 0.35,
+      "trend": "up",
+      "source": "BNEF",
+      "insight": "AI渗透率从5%升至15%"
+    },
+    {
+      "label": "2024年光伏AI运维渗透率",
+      "value": "18",
+      "unit": "%",
+      "year": 2024,
+      "growthRate": 0.2,
+      "trend": "up",
+      "source": "Wood Mackenzie",
+      "insight": "头部企业已超30%"
+    },
+    {
+      "label": "全球新能源AI专利数(2024)",
+      "value": "4500",
+      "unit": "件",
+      "year": 2024,
+      "growthRate": 0.42,
+      "trend": "up",
+      "source": "WIPO",
+      "insight": "中国占比40%，驱动壁垒"
+    },
+    {
+      "label": "2024年AI新能源头部企业市占率(华为)",
+      "value": "22",
+      "unit": "%",
+      "year": 2024,
+      "growthRate": 0.05,
+      "trend": "flat",
+      "source": "公司财报",
+      "insight": "华为在光伏AI逆变器领域领先"
+    }
+  ],
+  "valueChain": {
+    "upstream": {
+      "name": "上游 · 数据与算法",
+      "aiPenetration": "high",
+      "nodes": [
+        {
+          "name": "气象数据服务",
+          "valueShare": 10,
+          "marginRange": [
+            40,
+            60
+          ]
+        },
+        {
+          "name": "AI模型训练平台",
+          "valueShare": 12,
+          "marginRange": [
+            50,
+            70
+          ]
+        }
+      ]
+    },
+    "midstream": {
+      "name": "中游 · 应用集成",
+      "aiPenetration": "medium",
+      "nodes": [
+        {
+          "name": "发电功率预测系统",
+          "valueShare": 25,
+          "marginRange": [
+            30,
+            45
+          ]
+        },
+        {
+          "name": "智能运维与监控",
+          "valueShare": 20,
+          "marginRange": [
+            35,
+            50
+          ]
+        }
+      ]
+    },
+    "downstream": {
+      "name": "下游 · 运营与服务",
+      "aiPenetration": "high",
+      "nodes": [
+        {
+          "name": "电网调度与交易",
+          "valueShare": 18,
+          "marginRange": [
+            25,
+            40
+          ]
+        },
+        {
+          "name": "储能管理系统",
+          "valueShare": 15,
+          "marginRange": [
+            20,
+            35
+          ]
+        }
+      ]
+    }
+  },
+  "playerCategories": [
+    {
+      "category": "巨头/平台型",
+      "players": [
+        {
+          "name": "华为",
+          "description": "AI芯片+逆变器+云平台全栈能力"
+        },
+        {
+          "name": "远景能源",
+          "description": "AI+风机+储能+物联网生态"
+        },
+        {
+          "name": "谷歌(DeepMind)",
+          "description": "气象预测与风电优化算法领先"
+        }
+      ]
+    },
+    {
+      "category": "垂直领域龙头",
+      "players": [
+        {
+          "name": "金风科技",
+          "description": "风机AI运维与功率预测"
+        },
+        {
+          "name": "阳光电源",
+          "description": "光伏逆变器AI优化"
+        },
+        {
+          "name": "宁德时代",
+          "description": "储能电池AI寿命预测"
+        }
+      ]
+    },
+    {
+      "category": "AI创业新锐",
+      "players": [
+        {
+          "name": "Watttron",
+          "description": "光伏电站AI调度决策平台"
+        },
+        {
+          "name": "GridBeyond",
+          "description": "AI储能交易与需求响应"
+        }
+      ]
+    },
+    {
+      "category": "隐形冠军",
+      "players": [
+        {
+          "name": "阿特斯",
+          "description": "光伏组件AI缺陷检测设备"
+        },
+        {
+          "name": "维斯塔斯",
+          "description": "风机AI载荷与寿命管理"
+        }
+      ]
+    }
+  ],
+  "aiOpportunities": [
+    {
+      "title": "光伏功率预测优化",
+      "maturityScore": 4,
+      "valueCeilingScore": 3,
+      "verdict": "scaling"
+    },
+    {
+      "title": "风电叶片AI视觉巡检",
+      "maturityScore": 3,
+      "valueCeilingScore": 2,
+      "verdict": "scaling"
+    },
+    {
+      "title": "储能容量退化预测",
+      "maturityScore": 3,
+      "valueCeilingScore": 3,
+      "verdict": "demand"
+    },
+    {
+      "title": "微电网实时调度AI",
+      "maturityScore": 2,
+      "valueCeilingScore": 4,
+      "verdict": "blue-ocean"
+    },
+    {
+      "title": "智能运维与故障诊断",
+      "maturityScore": 4,
+      "valueCeilingScore": 3,
+      "verdict": "proven"
+    }
+  ],
+  "portersFive": [
+    {
+      "force": "新进入者威胁",
+      "intensity": 3,
+      "rationale": "AI算法门槛高，但开源框架降低壁垒"
+    },
+    {
+      "force": "供应商议价能力",
+      "intensity": 2,
+      "rationale": "数据供应商众多，替换成本低"
+    },
+    {
+      "force": "买方议价能力",
+      "intensity": 4,
+      "rationale": "大型电网与电站集中采购，议价强"
+    },
+    {
+      "force": "替代品威胁",
+      "intensity": 3,
+      "rationale": "传统运维方式仍有一席之地"
+    },
+    {
+      "force": "现有竞争者强度",
+      "intensity": 4,
+      "rationale": "华为与远景竞争白热化"
+    }
+  ],
+  "trends": [
+    {
+      "title": "光伏板清洁机器人AI化",
+      "body": "基于视觉与路径优化，替代人工清洗，效率提升50%。",
+      "callout": "开发低成本边缘AI方案"
+    },
+    {
+      "title": "虚拟电厂AI聚合",
+      "body": "AI聚合分布式储能与光伏参与电力市场，2025年规模预计翻倍。",
+      "callout": "布局交易算法与聚合平台"
+    }
+  ],
+  "myths": [
+    {
+      "myth": "新能源发电完全不可预测",
+      "reality": "AI将短期预测误差降至5%以内"
+    },
+    {
+      "myth": "AI+新能源只涉及光伏",
+      "reality": "风电、储能、电网调度占比超过50%"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "AI+新能源中渗透率最高的细分领域是？",
+      "options": [
+        "光伏",
+        "风电",
+        "储能",
+        "电网调度"
+      ],
+      "correctIndex": 0,
+      "explanation": "光伏AI运维渗透率达18%，高于其他"
+    },
+    {
+      "question": "哪家公司在AI+新能源领域拥有全栈能力？",
+      "options": [
+        "金风科技",
+        "华为",
+        "宁德时代",
+        "维斯塔斯"
+      ],
+      "correctIndex": 1,
+      "explanation": "华为在芯片、算法、逆变器、云平台都有布局"
+    },
+    {
+      "question": "AI在新能源中最成熟的应用场景是？",
+      "options": [
+        "功率预测",
+        "微电网调度",
+        "储能部署",
+        "碳交易"
+      ],
+      "correctIndex": 0,
+      "explanation": "功率预测成熟度4分，已大规模商用"
+    }
+  ],
+  "compareData": {
+    "market": "AI+新能源",
+    "cagr": "35%",
+    "cr5": "45%",
+    "stage": "growth",
+    "aiPenetration": "18%",
+    "barrier": "数据质量与算法专利",
+    "salesCycle": "6-12个月",
+    "topPlayers": "华为、远景、谷歌",
+    "strength": "预测精度高、运维成本降30%",
+    "weakness": "数据孤岛与高定制化"
+  },
+  "sources": [
+    "IEA《世界能源展望2024》",
+    "BNEF《2024新能源数字化报告》",
+    "国家能源局《可再生能源智能运维指导意见》",
+    "Wood Mackenzie《光伏AI市场分析》",
+    "WIPO《AI与新能源专利统计》"
+  ],
+  "slug": "new-energy"
+}

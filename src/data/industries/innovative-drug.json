@@ -1,0 +1,352 @@
+{
+  "name": "AI + 创新药研发",
+  "emoji": "🧬",
+  "oneLiner": "AI加速药物发现，重构千亿级研发成本结构",
+  "stage": "growth",
+  "heroDeck": "新药研发的AI时刻",
+  "heroHook": "AI可将临床前研究周期缩短60%+",
+  "tags": [
+    {
+      "label": "500亿+",
+      "variant": "hot"
+    },
+    {
+      "label": "CAGR 35%+",
+      "variant": "hot"
+    }
+  ],
+  "headlineMetrics": [
+    {
+      "label": "2024年AI制药市场规模",
+      "value": "38",
+      "unit": "亿美元",
+      "year": 2024,
+      "growthRate": 0.42,
+      "trend": "up",
+      "source": "Frost & Sullivan",
+      "insight": "2028年有望突破150亿美元"
+    },
+    {
+      "label": "CAGR (2023-2028)",
+      "value": "38.5",
+      "unit": "%",
+      "year": 2028,
+      "growthRate": 0.385,
+      "trend": "up",
+      "source": "MarketsandMarkets",
+      "insight": "远超全球医药行业平均增速"
+    },
+    {
+      "label": "AI渗透率",
+      "value": "15",
+      "unit": "%(估算)",
+      "year": 2024,
+      "growthRate": 0,
+      "trend": "up",
+      "source": "Deep Pharma Intelligence",
+      "insight": "头部药企AI管线占比快速提升"
+    },
+    {
+      "label": "全球临床前药物发现周期",
+      "value": "3.5",
+      "unit": "年",
+      "year": 2024,
+      "growthRate": -0.12,
+      "trend": "down",
+      "source": "Nature Reviews Drug Discovery",
+      "insight": "传统需4-6年，AI缩短至2-3年"
+    },
+    {
+      "label": "AI药物管线数量",
+      "value": "200",
+      "unit": "条(估算)",
+      "year": 2024,
+      "growthRate": 0.5,
+      "trend": "up",
+      "source": "IQVIA",
+      "insight": "其中进入临床二期以上管线约40条"
+    }
+  ],
+  "valueChain": {
+    "upstream": {
+      "name": "上游 · 数据与算力",
+      "aiPenetration": "medium",
+      "nodes": [
+        {
+          "name": "基因组/蛋白组数据库",
+          "valueShare": 10,
+          "marginRange": [
+            50,
+            70
+          ]
+        },
+        {
+          "name": "临床/文献数据",
+          "valueShare": 15,
+          "marginRange": [
+            30,
+            50
+          ]
+        },
+        {
+          "name": "GPU/云计算基础设施",
+          "valueShare": 20,
+          "marginRange": [
+            15,
+            25
+          ]
+        }
+      ]
+    },
+    "midstream": {
+      "name": "中游 · AI药物发现平台",
+      "aiPenetration": "very_high",
+      "nodes": [
+        {
+          "name": "靶点发现与验证",
+          "valueShare": 20,
+          "marginRange": [
+            40,
+            60
+          ]
+        },
+        {
+          "name": "分子生成与优化",
+          "valueShare": 20,
+          "marginRange": [
+            45,
+            65
+          ]
+        },
+        {
+          "name": "ADMET预测",
+          "valueShare": 5,
+          "marginRange": [
+            50,
+            70
+          ]
+        }
+      ]
+    },
+    "downstream": {
+      "name": "下游 · 临床前与临床开发",
+      "aiPenetration": "low",
+      "nodes": [
+        {
+          "name": "临床前毒理/药代",
+          "valueShare": 5,
+          "marginRange": [
+            10,
+            20
+          ]
+        },
+        {
+          "name": "临床试验设计与患者招募",
+          "valueShare": 5,
+          "marginRange": [
+            5,
+            15
+          ]
+        }
+      ]
+    }
+  },
+  "playerCategories": [
+    {
+      "category": "巨头/平台型",
+      "players": [
+        {
+          "name": "英伟达",
+          "description": "提供AI+生物计算全栈加速库与算力"
+        },
+        {
+          "name": "谷歌(Isomorphic Labs)",
+          "description": "AlphaFold赋能药物发现，技术壁垒深厚"
+        },
+        {
+          "name": "微软",
+          "description": "Azure健康与EvoDiff生成模型，聚焦小分子"
+        },
+        {
+          "name": "辉瑞",
+          "description": "内部AI团队+外部合作，推动多条管线"
+        }
+      ]
+    },
+    {
+      "category": "垂直领域龙头",
+      "players": [
+        {
+          "name": "薛定谔(Schrodinger)",
+          "description": "计算化学平台，FEP+方法领先"
+        },
+        {
+          "name": "Relay Therapeutics",
+          "description": "AI+动态结构，专注于难成药靶点"
+        },
+        {
+          "name": "Recursion Pharmaceuticals",
+          "description": "高通量表型+AI，管线聚焦罕见病"
+        }
+      ]
+    },
+    {
+      "category": "AI创业新锐",
+      "players": [
+        {
+          "name": "英矽智能(Insilico)",
+          "description": "端到端AI平台，自免与纤维化管线领先"
+        },
+        {
+          "name": "晶泰科技(XtalPi)",
+          "description": "AI+自动化实验，晶型与制剂优化"
+        },
+        {
+          "name": "百图生科(BioMap)",
+          "description": "超大规模蛋白组大模型，靶点发现"
+        }
+      ]
+    },
+    {
+      "category": "隐形冠军",
+      "players": [
+        {
+          "name": "Atomwise",
+          "description": "基于深度CNN，每月虚拟筛选数十亿分子"
+        },
+        {
+          "name": "BenevolentAI",
+          "description": "整合知识图谱+AI，专注神经退行性疾病"
+        }
+      ]
+    }
+  ],
+  "aiOpportunities": [
+    {
+      "title": "AI驱动的靶点发现与不可成药靶点破解",
+      "maturityScore": 3,
+      "valueCeilingScore": 4,
+      "verdict": "scaling"
+    },
+    {
+      "title": "AI分子生成与先导化合物优化",
+      "maturityScore": 4,
+      "valueCeilingScore": 4,
+      "verdict": "proven"
+    },
+    {
+      "title": "AI辅助ADMET毒性预测",
+      "maturityScore": 3,
+      "valueCeilingScore": 3,
+      "verdict": "pre-boom"
+    },
+    {
+      "title": "AI临床前药效预测与转化医学模型",
+      "maturityScore": 2,
+      "valueCeilingScore": 4,
+      "verdict": "future"
+    },
+    {
+      "title": "AI临床试验模拟与患者分层",
+      "maturityScore": 2,
+      "valueCeilingScore": 3,
+      "verdict": "blue-ocean"
+    }
+  ],
+  "portersFive": [
+    {
+      "force": "新进入者威胁",
+      "intensity": 4,
+      "rationale": "AI+制药技术壁垒高，但模型与计算资源门槛降低，大批AI初创涌入"
+    },
+    {
+      "force": "供应商议价能力",
+      "intensity": 3,
+      "rationale": "上游算力与数据供应集中(英伟达、谷歌)，但开源替代品增多"
+    },
+    {
+      "force": "买方议价能力",
+      "intensity": 3,
+      "rationale": "大型药企掌握临床与商业化资源，可要求里程碑付款与权益分成"
+    },
+    {
+      "force": "替代品威胁",
+      "intensity": 2,
+      "rationale": "传统HTS与理性设计仍为主流，但AI的效率优势正快速替代"
+    },
+    {
+      "force": "现有竞争者强度",
+      "intensity": 4,
+      "rationale": "AI药企争抢管线与合作，同质化严重，差异化空间收窄"
+    }
+  ],
+  "trends": [
+    {
+      "title": "从单一靶点预测走向端到端全链条AI",
+      "body": "AI不再仅用于靶点发现，逐步渗透至分子设计、晶体预测、CMC、临床设计。英矽智能的端到端自免管线已进入临床二期。",
+      "callout": "开发全栈药学AI平台，而非单点工具，才能锁定药企长期合作伙伴关系。"
+    },
+    {
+      "title": "真实世界数据融合AI临床预测",
+      "body": "整合电子病历、基因组和影像数据，AI预测早期患者响应，推动精准临床试验入组。Recursion正与罗氏合作开发此类模型。",
+      "callout": "构建多模态数据中台，打通医院-药企-生物银行数据链路，是AIPM的重要产品机会。"
+    }
+  ],
+  "myths": [
+    {
+      "myth": "AI能直接发现新药并快速上市",
+      "reality": "AI加速发现与设计，但临床前验证与临床试验仍需5-10年，失败率与化学药无异。"
+    },
+    {
+      "myth": "AI制药公司=IT公司，核心看算法",
+      "reality": "算法仅是药物发现的引擎，真实壁垒在于湿实验验证能力、生物学认知与临床转化经验。"
+    },
+    {
+      "myth": "AI完全取代传统药物化学家",
+      "reality": "AI生成分子仍需药物化学专家审验与迭代，人机协作模式更高效，而非替代。"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "AI在药物研发中最早取得标志性突破的技术方向是什么？",
+      "options": [
+        "A. 蛋白质结构预测(AlphaFold)",
+        "B. 生成式分子设计(GAN)",
+        "C. 虚拟筛选(docking)",
+        "D. 临床试验仿真"
+      ],
+      "correctIndex": 0,
+      "explanation": "AlphaFold在蛋白质结构预测中取得突破，成为AI制药奠基性成果（L2/L3趋势）"
+    },
+    {
+      "question": "英矽智能(Insilico)的端到端AI平台在2024年有何关键进展？",
+      "options": [
+        "A. 获得FDA批准上市新药",
+        "B. 自免管线进入临床二期",
+        "C. 被大型药企全面收购",
+        "D. 开源了全套AI模型"
+      ],
+      "correctIndex": 1,
+      "explanation": "其自免管线DSP-1181已进入临床二期(L2/L3 playerCategories)"
+    }
+  ],
+  "compareData": {
+    "market": "AI赋能创新药研发",
+    "cagr": "38.5% (2023-2028)",
+    "cr5": "英伟达+谷歌+Schrodinger+Relay+Recursion 约占40%",
+    "stage": "成长早期，渗透率仅15%",
+    "aiPenetration": "中游(药物发现)高，上游与下游低",
+    "barrier": "高质量生物数据与湿实验验证能力",
+    "salesCycle": "企业级合作12-24个月，管线授权2-4年",
+    "topPlayers": "英伟达、Schrodinger、Relay、Recursion、Insilico",
+    "strength": "大幅缩短发现周期、降低试错成本",
+    "weakness": "临床验证数据不足、算法可解释性差"
+  },
+  "sources": [
+    "Frost & Sullivan《AI制药市场规模报告》(2024)",
+    "MarketsandMarkets《AI in Drug Discovery Market》(2024)",
+    "Nature Reviews Drug Discovery (2024)",
+    "IQVIA《AI管道分析报告》(2024)"
+  ],
+  "slug": "innovative-drug"
+}

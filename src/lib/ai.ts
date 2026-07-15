@@ -66,7 +66,7 @@ function getLLMConfig(): LLMConfig {
 }
 
 // ─── System Prompt ───────────────────────────────────────────────
-function buildSystemPrompt(industrySlug: string | null, suffix?: string): string {
+function buildSystemPrompt(industrySlug: string | null, suffix?: string, industryContext?: string): string {
   let prompt = `你是一个专业的行业分析助手，帮助AI产品经理快速理解行业know-how。${industrySlug ? `当前用户正在浏览「${industrySlug}」行业。` : ''}
 回答要求：
 - 使用中文，简洁有力
@@ -80,6 +80,19 @@ function buildSystemPrompt(industrySlug: string | null, suffix?: string): string
   if (suffix) {
     prompt += '\n\n' + suffix
   }
+
+  // 注入行业上下文数据
+  if (industryContext) {
+    prompt += `\n\n──────────────────────────────
+【用户当前浏览的行业数据】
+
+以下是用户正在查看的行业分析数据。当用户提问时，优先引用这些数据中的具体数字和判断。
+如果答案在这些数据中，直接引用并标注来源。
+如果答案不在其中，请诚实说明，并基于你的训练知识补充。
+
+${industryContext}`
+  }
+
   return prompt
 }
 
@@ -103,8 +116,8 @@ function buildMessages(
 }
 
 // ─── OpenAI 兼容的流式请求（OpenAI / DeepSeek / 自定义） ───────
-async function* streamOpenAICompatible(config: LLMConfig, history: ChatMessage[], question: string, industrySlug: string | null) {
-  const systemPrompt = buildSystemPrompt(industrySlug, config.systemPromptSuffix)
+async function* streamOpenAICompatible(config: LLMConfig, history: ChatMessage[], question: string, industrySlug: string | null, industryContext?: string) {
+  const systemPrompt = buildSystemPrompt(industrySlug, config.systemPromptSuffix, industryContext)
   const { messages } = buildMessages(history, question, systemPrompt)
 
   const res = await fetch(config.baseURL, {
@@ -158,9 +171,9 @@ async function* streamOpenAICompatible(config: LLMConfig, history: ChatMessage[]
 }
 
 // ─── Anthropic 流式请求 ─────────────────────────────────────────
-async function* streamAnthropic(config: LLMConfig, history: ChatMessage[], question: string, industrySlug: string | null) {
+async function* streamAnthropic(config: LLMConfig, history: ChatMessage[], question: string, industrySlug: string | null, industryContext?: string) {
   const Anthropic = (await import('@anthropic-ai/sdk')).default
-  const systemPrompt = buildSystemPrompt(industrySlug, config.systemPromptSuffix)
+  const systemPrompt = buildSystemPrompt(industrySlug, config.systemPromptSuffix, industryContext)
   const { messages } = buildMessages(history, question) // no system role for Anthropic
 
   const client = new Anthropic({
@@ -246,6 +259,7 @@ export async function generateAIResponse(
   industrySlug: string | null,
   history: ChatMessage[],
   signal?: AbortSignal,
+  industryContext?: string,
 ): Promise<ReadableStream<Uint8Array>> {
   const config = getLLMConfig()
 
@@ -259,13 +273,13 @@ export async function generateAIResponse(
 
     switch (config.provider) {
       case 'anthropic':
-        generator = streamAnthropic(config, history, question, industrySlug)
+        generator = streamAnthropic(config, history, question, industrySlug, industryContext)
         break
       case 'openai':
       case 'deepseek':
       case 'custom':
       default:
-        generator = streamOpenAICompatible(config, history, question, industrySlug)
+        generator = streamOpenAICompatible(config, history, question, industrySlug, industryContext)
         break
     }
 
@@ -274,6 +288,59 @@ export async function generateAIResponse(
     // 降级到模拟
     return simulateStream(matchResponseType(question))
   }
+}
+
+/**
+ * 非流式 LLM 调用，返回完整文本。用于搜索查询理解等短应答场景。
+ */
+export async function generateAIResponseText(
+  question: string,
+  systemPrompt: string,
+): Promise<string> {
+  const config = getLLMConfig()
+  if (!config.apiKey) throw new Error('No API key configured')
+
+  if (config.provider === 'anthropic') {
+    const Anthropic = (await import('@anthropic-ai/sdk')).default
+    const client = new Anthropic({ apiKey: config.apiKey })
+    const msg = await client.messages.create({
+      model: config.model,
+      system: systemPrompt,
+      messages: [{ role: 'user', content: question }],
+      max_tokens: 512,
+    })
+    const textBlocks = msg.content
+      .filter((c) => c.type === 'text')
+      .map((c) => (c as { type: 'text'; text: string }).text)
+    if (textBlocks.length === 0) throw new Error('No text in Anthropic response')
+    return textBlocks.join('')
+  }
+
+  // OpenAI-compatible 非流式
+  const res = await fetch(config.baseURL, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${config.apiKey}`,
+      ...(config.extraHeaders ?? {}),
+    },
+    body: JSON.stringify({
+      model: config.model,
+      messages: [
+        { role: 'system', content: systemPrompt },
+        { role: 'user', content: question },
+      ],
+      max_tokens: 512,
+      stream: false,
+    }),
+  })
+  if (!res.ok) {
+    throw new Error(`LLM API error: ${res.status}`)
+  }
+  const json = await res.json()
+  const content = json.choices?.[0]?.message?.content
+  if (!content) throw new Error('No content in LLM response')
+  return content
 }
 
 // 导出 config 读取函数，供前端设置页使用

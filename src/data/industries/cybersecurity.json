@@ -1,0 +1,357 @@
+{
+  "name": "AI + 网络安全",
+  "emoji": "🔒",
+  "oneLiner": "AI重塑攻防对抗，网络安全市场进入智能博弈新阶段。",
+  "stage": "growth",
+  "heroDeck": "AI驱动安全新纪元",
+  "heroHook": "2024年市场超800亿，AI驱动年增35%",
+  "tags": [
+    {
+      "label": "800+亿",
+      "variant": "hot"
+    },
+    {
+      "label": "年增35%",
+      "variant": "hot"
+    },
+    {
+      "label": "AI渗透率15%",
+      "variant": "neutral"
+    }
+  ],
+  "headlineMetrics": [
+    {
+      "label": "2024年中国网络安全市场规模",
+      "value": "832",
+      "unit": "亿元",
+      "year": 2024,
+      "growthRate": 0.18,
+      "trend": "up",
+      "source": "IDC",
+      "insight": "AI安全产品增速是传统安全2倍。”"
+    },
+    {
+      "label": "2020-2024年复合增长率",
+      "value": "15.6",
+      "unit": "%",
+      "year": 2024,
+      "growthRate": 0.156,
+      "trend": "up",
+      "source": "CCID",
+      "insight": "增速稳定，AI安全渗透加速。”"
+    },
+    {
+      "label": "CR5（头部企业份额）",
+      "value": "28",
+      "unit": "%",
+      "year": 2023,
+      "growthRate": -0.02,
+      "trend": "flat",
+      "source": "赛迪顾问",
+      "insight": "市场分散，AI赋能可能重塑格局。”"
+    },
+    {
+      "label": "安全漏洞数量（关键壁垒）",
+      "value": "2.5",
+      "unit": "万",
+      "year": 2023,
+      "growthRate": 0.15,
+      "trend": "up",
+      "source": "CNVD",
+      "insight": "漏洞增速不降，AI自动化检测成刚需。”"
+    },
+    {
+      "label": "头部企业市占率（360政企安全）",
+      "value": "6.5",
+      "unit": "%",
+      "year": 2023,
+      "growthRate": 0.3,
+      "trend": "up",
+      "source": "IDC",
+      "insight": "AI安全产品有望加速头部集中。”"
+    }
+  ],
+  "valueChain": {
+    "upstream": {
+      "name": "上游 · 安全芯片与操作系统",
+      "aiPenetration": "low",
+      "nodes": [
+        {
+          "name": "安全芯片",
+          "valueShare": 20,
+          "marginRange": [
+            15,
+            30
+          ]
+        },
+        {
+          "name": "操作系统安全",
+          "valueShare": 10,
+          "marginRange": [
+            10,
+            20
+          ]
+        }
+      ]
+    },
+    "midstream": {
+      "name": "中游 · 安全软件与服务",
+      "aiPenetration": "medium",
+      "nodes": [
+        {
+          "name": "威胁检测与响应",
+          "valueShare": 35,
+          "marginRange": [
+            20,
+            40
+          ]
+        },
+        {
+          "name": "安全咨询与运维",
+          "valueShare": 25,
+          "marginRange": [
+            15,
+            30
+          ]
+        }
+      ]
+    },
+    "downstream": {
+      "name": "下游 · 政企客户",
+      "aiPenetration": "high",
+      "nodes": [
+        {
+          "name": "政府与关键基础设施",
+          "valueShare": 40,
+          "marginRange": [
+            10,
+            25
+          ]
+        },
+        {
+          "name": "大型企业",
+          "valueShare": 35,
+          "marginRange": [
+            10,
+            20
+          ]
+        },
+        {
+          "name": "中小企业",
+          "valueShare": 25,
+          "marginRange": [
+            5,
+            15
+          ]
+        }
+      ]
+    }
+  },
+  "playerCategories": [
+    {
+      "category": "巨头/平台型",
+      "players": [
+        {
+          "name": "奇安信",
+          "description": "政企安全龙头，AI融入态势感知平台。"
+        },
+        {
+          "name": "华为",
+          "description": "提供AI安全底座，自研芯片与端侧安全。"
+        },
+        {
+          "name": "360",
+          "description": "大数据+AI驱动威胁情报，面向中小企业免费转付费。"
+        }
+      ]
+    },
+    {
+      "category": "垂直领域龙头",
+      "players": [
+        {
+          "name": "启明星辰",
+          "description": "深耕金融/运营商，AI检测规则库行业最多。"
+        },
+        {
+          "name": "深信服",
+          "description": "超融合安全一体机，AI辅助运维降本。"
+        }
+      ]
+    },
+    {
+      "category": "AI创业新锐",
+      "players": [
+        {
+          "name": "墨云科技",
+          "description": "AI模拟攻击自动化渗透测试。"
+        },
+        {
+          "name": "微步在线",
+          "description": "AI检测勒索软件，误报率低于1%。"
+        },
+        {
+          "name": "青藤云安全",
+          "description": "AI自适应安全，零信任架构。"
+        }
+      ]
+    },
+    {
+      "category": "隐形冠军",
+      "players": [
+        {
+          "name": "长亭科技",
+          "description": "AI Web应用防火墙，DDoS防御精度高。"
+        },
+        {
+          "name": "安恒信息",
+          "description": "AI数据安全，隐私计算场景领先。"
+        }
+      ]
+    }
+  ],
+  "aiOpportunities": [
+    {
+      "title": "AI驱动的威胁检测与响应",
+      "maturityScore": 4,
+      "valueCeilingScore": 4,
+      "verdict": "hot"
+    },
+    {
+      "title": "AI自动渗透测试与攻击模拟",
+      "maturityScore": 3,
+      "valueCeilingScore": 3,
+      "verdict": "scaling"
+    },
+    {
+      "title": "AI安全运营自动化编排",
+      "maturityScore": 3,
+      "valueCeilingScore": 4,
+      "verdict": "scaling"
+    },
+    {
+      "title": "AI数据泄露与隐私保护",
+      "maturityScore": 2,
+      "valueCeilingScore": 4,
+      "verdict": "future"
+    },
+    {
+      "title": "AI供应链安全检测",
+      "maturityScore": 2,
+      "valueCeilingScore": 3,
+      "verdict": "blue-ocean"
+    }
+  ],
+  "portersFive": [
+    {
+      "force": "新进入者威胁",
+      "intensity": 4,
+      "rationale": "AI技术门槛降低，创业公司更容易推出差异化检测产品。"
+    },
+    {
+      "force": "供应商议价能力",
+      "intensity": 3,
+      "rationale": "上游芯片和操作系统依赖华为/微软，但AI模型开源后议价减弱。"
+    },
+    {
+      "force": "买方议价能力",
+      "intensity": 4,
+      "rationale": "政企客户多为招标模式，对价格敏感，集成商压价能力较强。"
+    },
+    {
+      "force": "替代品威胁",
+      "intensity": 3,
+      "rationale": "开源安全工具增多，但AI检测的实时性难以被开源替代。"
+    },
+    {
+      "force": "现有竞争者强度",
+      "intensity": 5,
+      "rationale": "上千家安全厂商同质化竞争，AI差异化成为破局关键。"
+    }
+  ],
+  "trends": [
+    {
+      "title": "AI自动攻防对抗走向常态化",
+      "body": "安全厂商利用AI自动生成攻击向量与防御策略，攻防效率提升10倍。大模型成为攻防双方的新战场。",
+      "callout": "AI产品经理需构建自动化攻防平台，降低人力依赖。"
+    },
+    {
+      "title": "数据安全与隐私计算需求爆发",
+      "body": "法规驱动更严格的数据保护，AI用于动态脱敏与加密推理。数据跨境流动场景需AI实时风险评估。",
+      "callout": "集成隐私计算模块的AI安全产品将成为政企刚需。"
+    },
+    {
+      "title": "AI安全运营从专家驱动转为AI驱动",
+      "body": "传统SOC依赖分析师，AI自动化编排将效率提升80%。告警处理从小时级降至分钟级。",
+      "callout": "设计AI运维仪表盘，将安全运营TCO降低50%是关键卖点。"
+    }
+  ],
+  "myths": [
+    {
+      "myth": "AI安全就是部署一个智能防火墙",
+      "reality": "AI安全需覆盖威胁检测、响应、溯源全链条，单一产品难防APT攻击。"
+    },
+    {
+      "myth": "小企业不需要AI安全，买传统杀毒软件就够了",
+      "reality": "勒索软件攻击量连年翻倍，AI检测能识别未知变种，小企业同样易受攻击。"
+    },
+    {
+      "myth": "AI安全产品可以直接替代安全分析师",
+      "reality": "AI目前主要辅助分析，复杂事件仍需人工研判，但可降低50%以上噪音。"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "2024年中国网络安全市场规模接近多少亿元？",
+      "options": [
+        "500",
+        "600",
+        "800",
+        "1000"
+      ],
+      "correctIndex": 2,
+      "explanation": "IDC数据显示2024年市场约832亿元。"
+    },
+    {
+      "question": "下列哪项技术不属于AI安全主要应用方向？",
+      "options": [
+        "威胁检测",
+        "渗透测试",
+        "营销自动化",
+        "数据泄露防护"
+      ],
+      "correctIndex": 2,
+      "explanation": "AI安全聚焦威胁检测、渗透测试、数据保护，营销自动化非安全核心方向。"
+    },
+    {
+      "question": "AI安全创业新锐多聚焦哪个场景？",
+      "options": [
+        "防火墙硬件",
+        "基础架构安全",
+        "AI自动渗透测试",
+        "身份认证"
+      ],
+      "correctIndex": 2,
+      "explanation": "AI自动渗透测试因技术门槛降低成为创业热门方向。"
+    }
+  ],
+  "compareData": {
+    "market": "网络安全",
+    "cagr": "15.6% (2020-2024)",
+    "cr5": "28% (2023)",
+    "stage": "growth",
+    "aiPenetration": "15% (AI安全产品占比估算)",
+    "barrier": "安全漏洞增长率15%",
+    "salesCycle": "政企客户6-12个月",
+    "topPlayers": "奇安信、360、阿里云、腾讯云",
+    "strength": "政企合规驱动，安全预算刚性增长",
+    "weakness": "产品同质化严重，市场竞争激烈"
+  },
+  "sources": [
+    "IDC《中国网络安全市场追踪报告》",
+    "CCID《2024年中国网络安全产业白皮书》",
+    "CNVD《国家信息安全漏洞通报》",
+    "赛迪顾问《2023年中国网络安全企业竞争力研究》",
+    "工信部《网络安全产业高质量发展三年行动计划》"
+  ],
+  "slug": "cybersecurity"
+}

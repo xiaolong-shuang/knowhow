@@ -1,4 +1,5 @@
 import { getLLMConfig } from '@/lib/ai'
+import { trackEvent, incrementStat } from '@/lib/events'
 
 const COMPARE_SYSTEM_PROMPT = `你是一位资深行业分析顾问，为AI产品经理提供赛道选型决策支持。请对比「{industryA}」和「{industryB}」两个行业，输出一个完整、有判断力的对比JSON报告。
 
@@ -155,7 +156,9 @@ function sanitizeCompare(raw: any): any {
 
 export async function POST(req: Request) {
   try {
-    const { industryA, industryB } = await req.json()
+    const { industryA, industryB, anonymousId } = await req.json()
+
+    console.log(`[compare] anon=${anonymousId?.slice(0, 8)}... A=${industryA} B=${industryB}`)
 
     if (!industryA || !industryB || typeof industryA !== 'string' || typeof industryB !== 'string') {
       return Response.json({ error: 'Both industryA and industryB are required' }, { status: 400 })
@@ -164,6 +167,9 @@ export async function POST(req: Request) {
     const config = getLLMConfig()
 
     if (!config.apiKey) {
+      trackEvent({ type: 'compare', anonymousId, payload: { industryA: industryA.trim(), industryB: industryB.trim(), fallback: true } })
+      incrementStat('industries', industryA)
+      incrementStat('industries', industryB)
       return Response.json({
         data: buildFallback(industryA.trim(), industryB.trim()),
         fallback: true,
@@ -253,6 +259,10 @@ export async function POST(req: Request) {
       decisionMatrix: parsed.decisionMatrix || {},
       sources: Array.isArray(parsed.sources) ? parsed.sources.map(String) : [],
     }
+
+    trackEvent({ type: 'compare', anonymousId, payload: { industryA: industryA.trim(), industryB: industryB.trim(), fallback: false } })
+    incrementStat('industries', industryA)
+    incrementStat('industries', industryB)
 
     return Response.json({ data })
   } catch (e: any) {

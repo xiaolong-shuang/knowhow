@@ -1,11 +1,49 @@
 'use client'
 
-import { useMemo } from 'react'
+import { useEffect, useMemo } from 'react'
 import { usePathname, useSearchParams } from 'next/navigation'
 import { useChatStore } from '@/stores/chat'
+import { useAnalyzeStore } from '@/stores/analyze'
+import { compressIndustryForChat } from '@/lib/chat-context'
 import { ChatMessages } from './chat-messages'
 import { ChatInput } from './chat-input'
 import { QuickPrompts } from './quick-prompts'
+import type { IndustrySchema } from '@/types'
+
+// 静态导入所有行业数据 JSON——Turbopack 无法在客户端解析变量拼接的 import 路径
+import healthcareData from '@/data/industries/healthcare.json'
+import educationData from '@/data/industries/education.json'
+import financeData from '@/data/industries/finance.json'
+import aigcData from '@/data/industries/aigc.json'
+import semiconductorData from '@/data/industries/semiconductor.json'
+import autonomousDrivingData from '@/data/industries/autonomous-driving.json'
+import solidStateBatteryData from '@/data/industries/solid-state-battery.json'
+import cybersecurityData from '@/data/industries/cybersecurity.json'
+import lowAltitudeEconomyData from '@/data/industries/low-altitude-economy.json'
+import droneEvtolData from '@/data/industries/drone-evtol.json'
+import aiDrugDiscoveryData from '@/data/industries/ai-drug-discovery.json'
+import drugDiscoveryData from '@/data/industries/drug-discovery.json'
+import innovativeDrugData from '@/data/industries/innovative-drug.json'
+import industrialRobotData from '@/data/industries/industrial-robot.json'
+import newEnergyData from '@/data/industries/new-energy.json'
+
+const STATIC_INDUSTRY_DATA: Record<string, IndustrySchema> = {
+  healthcare: healthcareData as unknown as IndustrySchema,
+  education: educationData as unknown as IndustrySchema,
+  finance: financeData as unknown as IndustrySchema,
+  aigc: aigcData as unknown as IndustrySchema,
+  semiconductor: semiconductorData as unknown as IndustrySchema,
+  'autonomous-driving': autonomousDrivingData as unknown as IndustrySchema,
+  'solid-state-battery': solidStateBatteryData as unknown as IndustrySchema,
+  cybersecurity: cybersecurityData as unknown as IndustrySchema,
+  'low-altitude-economy': lowAltitudeEconomyData as unknown as IndustrySchema,
+  'drone-evtol': droneEvtolData as unknown as IndustrySchema,
+  'ai-drug-discovery': aiDrugDiscoveryData as unknown as IndustrySchema,
+  'drug-discovery': drugDiscoveryData as unknown as IndustrySchema,
+  'innovative-drug': innovativeDrugData as unknown as IndustrySchema,
+  'industrial-robot': industrialRobotData as unknown as IndustrySchema,
+  'new-energy': newEnergyData as unknown as IndustrySchema,
+}
 
 // Industry-slug → quick prompts mapping (extensible)
 const PROMPTS_BY_INDUSTRY: Record<string, string[]> = {
@@ -57,13 +95,45 @@ export function ChatPanel() {
   const close = useChatStore((s) => s.close)
   const pathname = usePathname()
   const searchParams = useSearchParams()
+  const analyzeData = useAnalyzeStore((s) => s.data)
+  const setIndustryContext = useChatStore((s) => s.setIndustryContext)
+  const industryContext = useChatStore((s) => s.industryContext)
+
+  // 根据当前路径计算行业上下文，注入到 chat store
+  useEffect(() => {
+    // 路径 /industry/[slug] → 查静态查找表
+    const industryMatch = pathname.match(/^\/industry\/(\w+)/)
+    if (industryMatch) {
+      const slug = industryMatch[1]
+      const data = STATIC_INDUSTRY_DATA[slug]
+      if (data) {
+        setIndustryContext(compressIndustryForChat(data))
+        return
+      }
+    }
+    // 路径 /analyze 且有 analyzeData
+    if (pathname === '/analyze' && analyzeData) {
+      setIndustryContext(compressIndustryForChat(analyzeData))
+      return
+    }
+    // 其他路径 → 无上下文
+    setIndustryContext(null)
+  }, [pathname, analyzeData, setIndustryContext])
 
   const prompts = useMemo(() => {
     // Case 1: On a static industry detail page — /industry/healthcare
     const industryMatch = pathname.match(/^\/industry\/(\w+)/)
     if (industryMatch) {
       const slug = industryMatch[1]
-      const industryName = { healthcare: '医疗', education: '教育', finance: '金融' }[slug] ?? slug
+      const industryName = {
+        healthcare: '医疗', education: '教育', finance: '金融',
+        aigc: 'AIGC', semiconductor: '半导体', 'autonomous-driving': '自动驾驶',
+        'solid-state-battery': '固态电池', cybersecurity: '网络安全',
+        'low-altitude-economy': '低空经济', 'drone-evtol': '无人机/eVTOL',
+        'ai-drug-discovery': 'AI药物研发', 'drug-discovery': '药物发现',
+        'innovative-drug': '创新药', 'industrial-robot': '工业机器人',
+        'new-energy': '新能源',
+      }[slug] ?? slug
       const basePrompts = PROMPTS_BY_INDUSTRY[slug]
       if (basePrompts) return basePrompts
       // Unknown industry slug — generate on the fly
@@ -123,10 +193,10 @@ export function ChatPanel() {
         <ChatMessages />
 
         {/* Quick prompts */}
-        <QuickPrompts prompts={prompts} />
+        <QuickPrompts prompts={prompts} industryContext={industryContext} />
 
         {/* Input */}
-        <ChatInput />
+        <ChatInput industryContext={industryContext} />
       </div>
     </>
   )

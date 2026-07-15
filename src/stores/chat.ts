@@ -6,6 +6,8 @@ interface ChatState {
   messages: ChatMessage[]
   isLoading: boolean
   isStreaming: boolean
+  /** 当前页面行业上下文数据（压缩后的文本摘要），null = 无上下文 */
+  industryContext: string | null
   open: () => void
   close: () => void
   toggle: () => void
@@ -13,6 +15,7 @@ interface ChatState {
   setLoading: (v: boolean) => void
   setStreaming: (v: boolean) => void
   updateLastMessage: (content: string) => void
+  setIndustryContext: (ctx: string | null) => void
 }
 
 export const useChatStore = create<ChatState>((set) => ({
@@ -20,6 +23,7 @@ export const useChatStore = create<ChatState>((set) => ({
   messages: [],
   isLoading: false,
   isStreaming: false,
+  industryContext: null,
   open: () => set({ isOpen: true }),
   close: () => set({ isOpen: false }),
   toggle: () => set((s) => ({ isOpen: !s.isOpen })),
@@ -34,4 +38,5 @@ export const useChatStore = create<ChatState>((set) => ({
       }
       return { messages: msgs }
     }),
+  setIndustryContext: (ctx) => set({ industryContext: ctx }),
 }))

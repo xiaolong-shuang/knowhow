@@ -1,0 +1,325 @@
+{
+  "name": "AI + 半导体",
+  "emoji": "🔬",
+  "oneLiner": "AI驱动半导体设计与制造效率革命，重塑芯片产业格局",
+  "stage": "growth",
+  "heroDeck": "AI赋能芯片设计",
+  "heroHook": "AI加速芯片设计周期30%，市场规模年增15%",
+  "tags": [
+    {
+      "label": "5000+亿",
+      "variant": "hot"
+    }
+  ],
+  "headlineMetrics": [
+    {
+      "label": "2024年全球半导体市场规模",
+      "value": "6280",
+      "unit": "亿美元",
+      "year": 2024,
+      "growthRate": 0.19,
+      "trend": "up",
+      "source": "WSTS",
+      "insight": "AI芯片需求推动增长"
+    },
+    {
+      "label": "2020-2024年行业CAGR",
+      "value": "8.5",
+      "unit": "百分号",
+      "year": 2024,
+      "growthRate": 0.085,
+      "trend": "up",
+      "source": "IC Insights",
+      "insight": "周期性波动中稳健扩张"
+    },
+    {
+      "label": "AI渗透率（芯片设计）",
+      "value": "35",
+      "unit": "百分号",
+      "year": 2024,
+      "growthRate": 0.15,
+      "trend": "up",
+      "source": "麦肯锡",
+      "insight": "AI辅助设计加速普及"
+    },
+    {
+      "label": "全球晶圆产能增长率",
+      "value": "6.4",
+      "unit": "百分号",
+      "year": 2024,
+      "growthRate": 0.064,
+      "trend": "up",
+      "source": "SEMI",
+      "insight": "产能扩张有限，供需紧平衡"
+    },
+    {
+      "label": "头部企业市占率（台积电）",
+      "value": "61.0",
+      "unit": "百分号",
+      "year": 2024,
+      "growthRate": 0.02,
+      "trend": "flat",
+      "source": "TrendForce",
+      "insight": "代工市场高度集中"
+    }
+  ],
+  "valueChain": {
+    "upstream": {
+      "name": "上游 · 硅料与设备",
+      "aiPenetration": "low",
+      "nodes": [
+        {
+          "name": "硅料",
+          "valueShare": 10,
+          "marginRange": [
+            15,
+            25
+          ]
+        },
+        {
+          "name": "光刻机",
+          "valueShare": 25,
+          "marginRange": [
+            35,
+            50
+          ]
+        }
+      ]
+    },
+    "midstream": {
+      "name": "中游 · 晶圆制造",
+      "aiPenetration": "medium",
+      "nodes": [
+        {
+          "name": "晶圆代工",
+          "valueShare": 35,
+          "marginRange": [
+            20,
+            45
+          ]
+        },
+        {
+          "name": "封装测试",
+          "valueShare": 15,
+          "marginRange": [
+            10,
+            20
+          ]
+        }
+      ]
+    },
+    "downstream": {
+      "name": "下游 · 芯片设计与应用",
+      "aiPenetration": "high",
+      "nodes": [
+        {
+          "name": "芯片设计",
+          "valueShare": 15,
+          "marginRange": [
+            20,
+            35
+          ]
+        },
+        {
+          "name": "系统集成",
+          "valueShare": 10,
+          "marginRange": [
+            5,
+            15
+          ]
+        }
+      ]
+    }
+  },
+  "playerCategories": [
+    {
+      "category": "巨头/平台型",
+      "players": [
+        {
+          "name": "英伟达",
+          "description": "AI芯片霸主，GPU算力核心"
+        },
+        {
+          "name": "台积电",
+          "description": "先进制程代工，AI芯片生产命脉"
+        },
+        {
+          "name": "英特尔",
+          "description": "IDM转型，AI加速器布局"
+        }
+      ]
+    },
+    {
+      "category": "垂直领域龙头",
+      "players": [
+        {
+          "name": "高通",
+          "description": "移动端AI芯片，边缘计算"
+        },
+        {
+          "name": "AMD",
+          "description": "CPU+GPU组合，AI训练竞品"
+        },
+        {
+          "name": "博通",
+          "description": "定制AI芯片，网络通信领域"
+        }
+      ]
+    },
+    {
+      "category": "AI创业新锐",
+      "players": [
+        {
+          "name": "Cerebras",
+          "description": "晶圆级芯片，突破算力极限"
+        },
+        {
+          "name": "Graphcore",
+          "description": "IPU架构，专注AI推理"
+        },
+        {
+          "name": "地平线",
+          "description": "车规级AI芯片，自动驾驶场景"
+        }
+      ]
+    },
+    {
+      "category": "隐形冠军",
+      "players": [
+        {
+          "name": "ASML",
+          "description": "光刻机垄断，极紫外技术"
+        },
+        {
+          "name": "澜起科技",
+          "description": "内存接口芯片，数据中心互联"
+        },
+        {
+          "name": "思瑞浦",
+          "description": "高性能模拟芯片，信号链路"
+        }
+      ]
+    }
+  ],
+  "aiOpportunities": [
+    {
+      "title": "AI辅助芯片布局布线优化",
+      "maturityScore": 3,
+      "valueCeilingScore": 4,
+      "verdict": "scaling"
+    },
+    {
+      "title": "AI晶圆缺陷检测与良率提升",
+      "maturityScore": 4,
+      "valueCeilingScore": 3,
+      "verdict": "proven"
+    },
+    {
+      "title": "AI驱动光刻工艺参数自动调优",
+      "maturityScore": 2,
+      "valueCeilingScore": 4,
+      "verdict": "future"
+    }
+  ],
+  "portersFive": [
+    {
+      "force": "新进入者威胁",
+      "intensity": 2,
+      "rationale": "资本和技术壁垒极高，新玩家难以突破"
+    },
+    {
+      "force": "供应商议价能力",
+      "intensity": 4,
+      "rationale": "ASML等设备商垄断核心工具"
+    },
+    {
+      "force": "买方议价能力",
+      "intensity": 3,
+      "rationale": "大型客户如苹果有议价权但依赖定制"
+    },
+    {
+      "force": "替代品威胁",
+      "intensity": 1,
+      "rationale": "芯片无替代品，但新兴技术如光子计算可能"
+    },
+    {
+      "force": "现有竞争者强度",
+      "intensity": 5,
+      "rationale": "英伟达、高通等激烈竞争，技术迭代快"
+    }
+  ],
+  "trends": [
+    {
+      "title": "异构集成与Chiplet崛起",
+      "body": "AI需求推动多芯片封装，Chiplet降低设计成本。2024年市场规模达44亿美元(估算)。",
+      "callout": "AI PM应关注互联接口标准化机遇"
+    },
+    {
+      "title": "RISC-V架构生态拓展",
+      "body": "开源指令集在IoT和AI边缘设备渗透。2024年全球出货超10亿颗(估算)。",
+      "callout": "可切入定制化AI加速器设计"
+    },
+    {
+      "title": "3D封装与先进工艺竞赛",
+      "body": "台积电CoWoS产能供不应求。AI芯片功耗密度迫近物理极限。",
+      "callout": "探索AI驱动的热管理解决方案"
+    }
+  ],
+  "myths": [
+    {
+      "myth": "半导体行业无周期性",
+      "reality": "实际受供需和市场波动影响，每3-4年一个周期"
+    },
+    {
+      "myth": "芯片制造全自动化",
+      "reality": "晶圆厂仍依赖大量人工操作，AI渗透率不足"
+    },
+    {
+      "myth": "AI芯片仅指GPU",
+      "reality": "ASIC、FPGA、NPU等多样架构并存"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "全球半导体市场增长的主要驱动力是什么？",
+      "options": [
+        "汽车电子",
+        "AI芯片需求",
+        "消费电子复苏",
+        "工业自动化"
+      ],
+      "correctIndex": 1,
+      "explanation": "AI芯片需求是2024年最大增长引擎"
+    },
+    {
+      "question": "台积电在晶圆代工市场的份额约为？",
+      "options": [
+        "40%",
+        "50%",
+        "60%",
+        "70%"
+      ],
+      "correctIndex": 2,
+      "explanation": "2024年台积电市占率61%，高度集中"
+    }
+  ],
+  "compareData": {
+    "market": "全球6280亿美元",
+    "cagr": "8.5% (2020-2024)",
+    "cr5": "CR5约51% (2024年估算)",
+    "stage": "成长中，周期性明显",
+    "aiPenetration": "中，设计端35%",
+    "barrier": "极高：资本、技术、生态",
+    "salesCycle": "12-24个月",
+    "topPlayers": "英伟达、台积电、三星",
+    "strength": "创新能力强、需求旺盛",
+    "weakness": "周期波动、地缘政治风险"
+  },
+  "sources": [
+    "WSTS《2024年全球半导体市场预测》",
+    "麦肯锡《AI在半导体行业的应用》",
+    "SEMI《全球晶圆厂产能报告》",
+    "TrendForce《2024年晶圆代工市场分析》"
+  ],
+  "slug": "semiconductor"
+}

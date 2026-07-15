@@ -2,10 +2,16 @@
 
 import { useState } from 'react'
 import { useChatStore } from '@/stores/chat'
+import { getAnonymousId } from '@/lib/anonymous-id'
 
 let nextId = 1
 
-export function ChatInput() {
+interface ChatInputProps {
+  /** 当前页面的行业上下文，从 ChatPanel 传入 */
+  industryContext?: string | null
+}
+
+export function ChatInput({ industryContext }: ChatInputProps) {
   const [text, setText] = useState('')
   const addMessage = useChatStore((s) => s.addMessage)
   const setLoading = useChatStore((s) => s.setLoading)
@@ -23,10 +29,16 @@ export function ChatInput() {
     setStreaming(true)
 
     try {
+      const allMessages = useChatStore.getState().messages
       const res = await fetch('/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ question: content }),
+        body: JSON.stringify({
+          question: content,
+          history: allMessages.slice(-7, -1), // 最近 3 轮（6条）不含当前消息
+          industryContext: industryContext ?? undefined,
+          anonymousId: getAnonymousId(),
+        }),
       })
 
       if (!res.ok) throw new Error('API error')

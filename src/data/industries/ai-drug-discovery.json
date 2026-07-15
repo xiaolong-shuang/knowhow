@@ -1,0 +1,382 @@
+{
+  "name": "AI辅助药物研发",
+  "emoji": "💊",
+  "oneLiner": "AI加速靶点发现与先导化合物优化，缩短新药研发周期至传统1/3",
+  "stage": "growth",
+  "heroDeck": "数据驱动的分子革命",
+  "heroHook": "2024年全球融资超30亿美元，管线进入临床数量翻倍",
+  "tags": [
+    {
+      "label": "500+亿",
+      "variant": "hot"
+    },
+    {
+      "label": "CAGR 38%",
+      "variant": "hot"
+    },
+    {
+      "label": "临床管线200+",
+      "variant": "primary"
+    }
+  ],
+  "headlineMetrics": [
+    {
+      "label": "2024年全球市场规模",
+      "value": "38.6",
+      "unit": "亿美元",
+      "year": 2024,
+      "growthRate": 0.38,
+      "trend": "up",
+      "source": "Deep Pharma Intelligence",
+      "insight": "三年内市场有望翻三倍"
+    },
+    {
+      "label": "2020-2024 CAGR",
+      "value": "38",
+      "unit": "%",
+      "year": 2024,
+      "growthRate": 0.38,
+      "trend": "up",
+      "source": "MarketsandMarkets",
+      "insight": "资本涌入驱动增长率远高传统制药"
+    },
+    {
+      "label": "AI渗透率（研发管线占比）",
+      "value": "15",
+      "unit": "%",
+      "year": 2024,
+      "growthRate": 0.07,
+      "trend": "up",
+      "source": "Nature Reviews Drug Discovery",
+      "insight": "虽低但增速快，2026年预计达25%"
+    },
+    {
+      "label": "关键壁垒：AI辅助设计分子进入临床数量",
+      "value": "230",
+      "unit": "个",
+      "year": 2024,
+      "growthRate": 0.9,
+      "trend": "up",
+      "source": "智研咨询",
+      "insight": "临床转化能力是核心竞争力"
+    },
+    {
+      "label": "头部企业市占率（Recursion+Schrödinger）",
+      "value": "22",
+      "unit": "%",
+      "year": 2024,
+      "growthRate": 0.05,
+      "trend": "up",
+      "source": "CB Insights",
+      "insight": "集中度低，蓝海市场碎片化"
+    }
+  ],
+  "valueChain": {
+    "upstream": {
+      "name": "上游 · 数据与算力",
+      "aiPenetration": "very_high",
+      "nodes": [
+        {
+          "name": "高通量测序数据",
+          "valueShare": 20,
+          "marginRange": [
+            30,
+            50
+          ]
+        },
+        {
+          "name": "蛋白结构数据库",
+          "valueShare": 10,
+          "marginRange": [
+            15,
+            25
+          ]
+        },
+        {
+          "name": "云计算GPU算力",
+          "valueShare": 15,
+          "marginRange": [
+            20,
+            35
+          ]
+        }
+      ]
+    },
+    "midstream": {
+      "name": "中游 · AI算法与平台",
+      "aiPenetration": "high",
+      "nodes": [
+        {
+          "name": "分子生成模型",
+          "valueShare": 25,
+          "marginRange": [
+            40,
+            60
+          ]
+        },
+        {
+          "name": "靶点预测系统",
+          "valueShare": 15,
+          "marginRange": [
+            35,
+            50
+          ]
+        },
+        {
+          "name": "临床试验模拟",
+          "valueShare": 10,
+          "marginRange": [
+            25,
+            40
+          ]
+        }
+      ]
+    },
+    "downstream": {
+      "name": "下游 · 药企与CRO",
+      "aiPenetration": "medium",
+      "nodes": [
+        {
+          "name": "药企研发部门",
+          "valueShare": 30,
+          "marginRange": [
+            -10,
+            10
+          ]
+        },
+        {
+          "name": "AI驱动的CRO",
+          "valueShare": 15,
+          "marginRange": [
+            20,
+            35
+          ]
+        },
+        {
+          "name": "投资机构",
+          "valueShare": 5,
+          "marginRange": [
+            -5,
+            5
+          ]
+        }
+      ]
+    }
+  },
+  "playerCategories": [
+    {
+      "category": "巨头/平台型",
+      "players": [
+        {
+          "name": "英伟达",
+          "description": "提供GPU算力及BioNeMo框架，捆绑药企生态"
+        },
+        {
+          "name": "谷歌DeepMind",
+          "description": "AlphaFold3开放蛋白结构预测，构建行业标准"
+        },
+        {
+          "name": "微软",
+          "description": "Azure云+PyMol整合，推出分子模拟即服务"
+        }
+      ]
+    },
+    {
+      "category": "垂直领域龙头",
+      "players": [
+        {
+          "name": "Recursion Pharmaceuticals",
+          "description": "高通量细胞图像+AI表型筛选，管线超40条"
+        },
+        {
+          "name": "Schrödinger",
+          "description": "物理模型+AI混合方法，软件+管线双轮驱动"
+        },
+        {
+          "name": "Insilico Medicine",
+          "description": "靶点发现至临床全流程AI，抗纤维化管线进入II期"
+        }
+      ]
+    },
+    {
+      "category": "AI创业新锐",
+      "players": [
+        {
+          "name": "晶泰科技",
+          "description": "基于量子物理的AI晶型预测，获多家药企订单"
+        },
+        {
+          "name": "英矽智能",
+          "description": "生成式AI设计分子，2023年自研管线授权给赛诺菲"
+        },
+        {
+          "name": "百图生科",
+          "description": "免疫组学AI平台，专注抗体药物发现"
+        }
+      ]
+    },
+    {
+      "category": "隐形冠军",
+      "players": [
+        {
+          "name": "Exscientia",
+          "description": "AI自动化实验室，分子设计成功率超行业5倍"
+        },
+        {
+          "name": "BenevolentAI",
+          "description": "知识图谱整合文献，发现老药新用机会"
+        },
+        {
+          "name": "两江药物",
+          "description": "国内AI中药复方优化平台，连接中药与西药标准"
+        }
+      ]
+    }
+  ],
+  "aiOpportunities": [
+    {
+      "title": "生成式AI设计先导化合物",
+      "maturityScore": 4,
+      "valueCeilingScore": 4,
+      "verdict": "scaling"
+    },
+    {
+      "title": "AI预测ADMET毒性",
+      "maturityScore": 3,
+      "valueCeilingScore": 4,
+      "verdict": "pre-boom"
+    },
+    {
+      "title": "自动化实验室+RL分子优化",
+      "maturityScore": 3,
+      "valueCeilingScore": 4,
+      "verdict": "demand"
+    },
+    {
+      "title": "AI驱动临床试验患者分层",
+      "maturityScore": 2,
+      "valueCeilingScore": 5,
+      "verdict": "blue-ocean"
+    },
+    {
+      "title": "老药重定位知识图谱",
+      "maturityScore": 4,
+      "valueCeilingScore": 3,
+      "verdict": "steady"
+    }
+  ],
+  "portersFive": [
+    {
+      "force": "新进入者威胁",
+      "intensity": 4,
+      "rationale": "开源模型降低门槛，但临床验证数据壁垒极高"
+    },
+    {
+      "force": "供应商议价能力",
+      "intensity": 3,
+      "rationale": "GPU算力由英伟达主导，但云厂商竞争抑制涨价"
+    },
+    {
+      "force": "买方议价能力",
+      "intensity": 4,
+      "rationale": "大型药企自研AI团队增加，压价单一平台 SaaS"
+    },
+    {
+      "force": "替代品威胁",
+      "intensity": 2,
+      "rationale": "传统湿实验周期太长，AI替代性并非完全替代而是辅助"
+    },
+    {
+      "force": "现有竞争者强度",
+      "intensity": 3,
+      "rationale": "多家公司争抢同一药企订单，差异化在数据质量"
+    }
+  ],
+  "trends": [
+    {
+      "title": "从单点工具到端到端平台",
+      "body": "头部玩家不再只卖软件，而是自建AI管线并推进至临床。Recursion与罗氏合作管线价值超10亿美元。",
+      "callout": "PM应关注闭环能力：数据→模型→湿实验验证的闭环"
+    },
+    {
+      "title": "私有药厂数据成为核心护城河",
+      "body": "公开数据库分子数饱和，差异化来自药企内部海量筛选数据。Insilico自建数据湖使分子生成准确率提升30%。",
+      "callout": "PM需设计安全合规的数据协作方案，如联邦学习"
+    },
+    {
+      "title": "监管认可度提升驱动商业化",
+      "body": "FDA接受AI辅助临床试验设计，2023年首个AI设计药物进入III期。法规明确化降低市场不确定性。",
+      "callout": "PM应提前对接注册法规团队，确保模型可解释性"
+    }
+  ],
+  "myths": [
+    {
+      "myth": "AI可以完全取代传统药物化学实验",
+      "reality": "AI只缩短先导优化周期，湿实验验证仍不可或缺，成功率提升约30%"
+    },
+    {
+      "myth": "AI药物研发只适用于小分子",
+      "reality": "大分子（抗体、mRNA）同样受益于AI，预测抗体-抗原结合已成熟"
+    },
+    {
+      "myth": "开源模型使小公司也能和巨头竞争",
+      "reality": "私有高质量数据获取成本极高，数据飞轮效应让先发者优势持续放大"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "以下哪种方法是AI辅助药物研发中的核心分子生成技术？",
+      "options": [
+        "A. 随机森林",
+        "B. 生成对抗网络",
+        "C. 卷积神经网络",
+        "D. 支持向量机"
+      ],
+      "correctIndex": 1,
+      "explanation": "GAN用于分子生成，提高结构多样性，是中游核心算法之一"
+    },
+    {
+      "question": "2024年全球AI制药市场规模最接近以下哪一数值？",
+      "options": [
+        "A. 10亿美元",
+        "B. 38.6亿美元",
+        "C. 100亿美元",
+        "D. 500亿美元"
+      ],
+      "correctIndex": 1,
+      "explanation": "根据第二板块数据，2024年市场规模38.6亿美元"
+    },
+    {
+      "question": "哪家公司的AI设计管线已进入III期临床试验？",
+      "options": [
+        "A. 英伟达",
+        "B. 谷歌",
+        "C. Insilico Medicine",
+        "D. 微软"
+      ],
+      "correctIndex": 2,
+      "explanation": "Insilico的抗纤维化管线已达到III期，这是垂直龙头的标志"
+    }
+  ],
+  "compareData": {
+    "market": "全球AI制药市场",
+    "cagr": "38% (2020-2024)",
+    "cr5": "47%（Recursion, Schrödinger, Exscientia, Insilico, BenevolentAI）",
+    "stage": "growth",
+    "aiPenetration": "15%（占所有研发管线）",
+    "barrier": "私有临床数据积累",
+    "salesCycle": "12-24月（从POC到合同签署）",
+    "topPlayers": "Recursion, Schrödinger, Insilico",
+    "strength": "缩短研发周期50%以上",
+    "weakness": "高算力成本与监管不确定性"
+  },
+  "sources": [
+    "Deep Pharma Intelligence《2024年AI制药行业报告》",
+    "MarketsandMarkets《AI in Drug Discovery Market - Global Forecast 2024-2029》",
+    "Nature Reviews Drug Discovery《AI in Drug Development: Pipeline Trends 2024》",
+    "FDA《Digital Health Innovation Action Plan》",
+    "赛迪顾问《中国AI制药行业白皮书2024》",
+    "智研咨询《AI制药行业深度分析及投资前景预测2024》"
+  ],
+  "slug": "ai-drug-discovery"
+}

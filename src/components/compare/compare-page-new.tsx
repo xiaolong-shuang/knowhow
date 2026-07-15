@@ -6,6 +6,7 @@ import { SourceFooter } from '@/components/industry/source-footer'
 import { CompareMetricCards } from './compare-metric-cards'
 import { CompareOpportunities } from './compare-opportunities'
 import { CompareVerdict, CompareDecision } from './compare-verdicts'
+import { FeedbackBar } from '@/components/shared/feedback-bar'
 
 interface CompareData {
   industryA: {
@@ -203,6 +204,11 @@ export function ComparePageNew() {
               ⚠️ 以上内容由 AI 生成，数据仅供参考，请以官方来源为准。
             </p>
           </div>
+
+          <FeedbackBar
+            query={`compare:${a.trim().replace(/\s+/g, '-').toLowerCase()}:${b.trim().replace(/\s+/g, '-').toLowerCase()}`}
+            cacheHit={false}
+          />
         </div>
       )}
 

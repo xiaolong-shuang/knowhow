@@ -1,0 +1,367 @@
+{
+  "name": "AI + 低空经济",
+  "emoji": "🛸",
+  "oneLiner": "AI赋能低空飞行器运营、管控与商业化，激活万亿级城市空中交通市场",
+  "stage": "growth",
+  "heroDeck": "天空之城，算法先行",
+  "heroHook": "2024年市场规模超5000亿，2030年有望达2万亿",
+  "tags": [
+    {
+      "label": "5000+亿",
+      "variant": "hot"
+    },
+    {
+      "label": "eVTOL爆发",
+      "variant": "new"
+    },
+    {
+      "label": "空管AI化",
+      "variant": "trending"
+    }
+  ],
+  "headlineMetrics": [
+    {
+      "label": "2024年中国低空经济市场规模",
+      "value": "5059.5",
+      "unit": "亿",
+      "year": 2024,
+      "growthRate": 0.33,
+      "trend": "up",
+      "source": "赛迪顾问",
+      "insight": "三年内突破万亿"
+    },
+    {
+      "label": "2020-2024年CAGR",
+      "value": "28.5",
+      "unit": "%",
+      "year": 2024,
+      "growthRate": 0.285,
+      "trend": "up",
+      "source": "民航局(估算)",
+      "insight": "增速远超传统航空"
+    },
+    {
+      "label": "CR5（头部企业市占率）",
+      "value": "45",
+      "unit": "%",
+      "year": 2024,
+      "trend": "flat",
+      "source": "亿航智能财报+券商估算",
+      "insight": "亿航/小鹏汇天/峰飞前三"
+    },
+    {
+      "label": "适航取证数量（关键壁垒）",
+      "value": "3",
+      "unit": "个型号",
+      "year": 2024,
+      "trend": "up",
+      "source": "中国民航局",
+      "insight": "全球仅三家获TC"
+    },
+    {
+      "label": "无人机驾驶员执照数量",
+      "value": "19.44",
+      "unit": "万本",
+      "year": 2024,
+      "growthRate": 0.26,
+      "trend": "up",
+      "source": "民航局",
+      "insight": "人才缺口仍大"
+    }
+  ],
+  "valueChain": {
+    "upstream": {
+      "name": "上游 · 飞行器研发制造",
+      "aiPenetration": "medium",
+      "nodes": [
+        {
+          "name": "电机电控",
+          "valueShare": 20,
+          "marginRange": [
+            15,
+            25
+          ]
+        },
+        {
+          "name": "电池系统",
+          "valueShare": 25,
+          "marginRange": [
+            10,
+            20
+          ]
+        },
+        {
+          "name": "飞控与航电",
+          "valueShare": 15,
+          "marginRange": [
+            20,
+            35
+          ]
+        }
+      ]
+    },
+    "midstream": {
+      "name": "中游 · 运营与空管",
+      "aiPenetration": "high",
+      "nodes": [
+        {
+          "name": "低空空管系统",
+          "valueShare": 15,
+          "marginRange": [
+            30,
+            50
+          ]
+        },
+        {
+          "name": "无人机运营服务",
+          "valueShare": 10,
+          "marginRange": [
+            10,
+            20
+          ]
+        }
+      ]
+    },
+    "downstream": {
+      "name": "下游 · 应用场景",
+      "aiPenetration": "very_high",
+      "nodes": [
+        {
+          "name": "物流配送",
+          "valueShare": 5,
+          "marginRange": [
+            5,
+            15
+          ]
+        },
+        {
+          "name": "农业植保",
+          "valueShare": 5,
+          "marginRange": [
+            10,
+            20
+          ]
+        },
+        {
+          "name": "测绘巡检",
+          "valueShare": 5,
+          "marginRange": [
+            15,
+            30
+          ]
+        }
+      ]
+    }
+  },
+  "playerCategories": [
+    {
+      "category": "巨头/平台型",
+      "players": [
+        {
+          "name": "华为",
+          "description": "鸿蒙+昇腾，提供低空智联网解决方案"
+        },
+        {
+          "name": "腾讯",
+          "description": "云+GIS，打造无人机管理平台"
+        },
+        {
+          "name": "阿里云",
+          "description": "云计算+AI，支撑空管数据服务"
+        }
+      ]
+    },
+    {
+      "category": "垂直领域龙头",
+      "players": [
+        {
+          "name": "亿航智能",
+          "description": "全球首个eVTOL适航取证，载人无人机先发"
+        },
+        {
+          "name": "小鹏汇天",
+          "description": "飞行汽车量产推进，X2获特许飞行证"
+        },
+        {
+          "name": "峰飞航空",
+          "description": "电动垂直起降飞行器，物流场景领先"
+        }
+      ]
+    },
+    {
+      "category": "AI创业新锐",
+      "players": [
+        {
+          "name": "星逻智能",
+          "description": "AI无人机机库+自动巡检系统"
+        },
+        {
+          "name": "云圣智能",
+          "description": "全自主无人机巡检，AI视觉识别"
+        },
+        {
+          "name": "览沃科技",
+          "description": "AI视觉定位SLAM，低成本避障方案"
+        }
+      ]
+    },
+    {
+      "category": "隐形冠军",
+      "players": [
+        {
+          "name": "纵横股份",
+          "description": "工业无人机全链条，AI融合场景定制"
+        },
+        {
+          "name": "中海达",
+          "description": "高精度导航定位，空管底层基础设施"
+        }
+      ]
+    }
+  ],
+  "aiOpportunities": [
+    {
+      "title": "AI驱动的低空空管冲突与路径优化",
+      "maturityScore": 3,
+      "valueCeilingScore": 4,
+      "verdict": "scaling"
+    },
+    {
+      "title": "AI视觉避障与自主降落系统",
+      "maturityScore": 4,
+      "valueCeilingScore": 3,
+      "verdict": "proven"
+    },
+    {
+      "title": "无人机AI缺陷检测（巡检场景）",
+      "maturityScore": 4,
+      "valueCeilingScore": 3,
+      "verdict": "steady"
+    },
+    {
+      "title": "AI生成无人机航线与任务规划",
+      "maturityScore": 3,
+      "valueCeilingScore": 4,
+      "verdict": "demand"
+    },
+    {
+      "title": "AI驾驶员培训仿真系统",
+      "maturityScore": 2,
+      "valueCeilingScore": 2,
+      "verdict": "future"
+    }
+  ],
+  "portersFive": [
+    {
+      "force": "新进入者威胁",
+      "intensity": 4,
+      "rationale": "适航取证壁垒高，但资本涌入快，已有新势力入场"
+    },
+    {
+      "force": "供应商议价能力",
+      "intensity": 3,
+      "rationale": "电池电机专业供应商有限，核心部件依赖进口"
+    },
+    {
+      "force": "买方议价能力",
+      "intensity": 2,
+      "rationale": "B端客户分散，但政府集采为主，议价空间小"
+    },
+    {
+      "force": "替代品威胁",
+      "intensity": 3,
+      "rationale": "传统直升机/无人机仍可替代部分场景，但效率低"
+    },
+    {
+      "force": "现有竞争者强度",
+      "intensity": 4,
+      "rationale": "头部企业差距小，专利战与适航竞赛白热化"
+    }
+  ],
+  "trends": [
+    {
+      "title": "适航取证加速，eVTOL商业化元年",
+      "body": "2024年三款eVTOL获TC，2025年预计5-8款。运营牌照与空管系统同步推进。",
+      "callout": "AI产品经理：聚焦空管软件与自动驾驶算法，先发优势窗口期短"
+    },
+    {
+      "title": "低空空管从人工调度转向AI全自动",
+      "body": "深圳、合肥等地试点AI低空交通管理，实时冲突检测与路径重规划。",
+      "callout": "AI产品经理：多智能体强化学习与数字孪生平台是核心能力"
+    },
+    {
+      "title": "无人机物流配送从试点到常态化",
+      "body": "美团、顺丰在深圳开通常态化航线，日均千单以上。",
+      "callout": "AI产品经理：商流与物流调度算法结合，优化最后一公里效率"
+    }
+  ],
+  "myths": [
+    {
+      "myth": "低空经济就是造飞行器",
+      "reality": "核心是运营与管控，AI空管比硬件更关键"
+    },
+    {
+      "myth": "无人机已经非常成熟",
+      "reality": "大规模城市复杂环境下的自主飞行仍是难题"
+    },
+    {
+      "myth": "eVTOL会立刻替代汽车",
+      "reality": "续航、法规、基础设施限制，5年内仅特定场景运营"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "低空经济发展最关键的瓶颈是什么？",
+      "options": [
+        "电池能量密度",
+        "适航取证周期",
+        "飞行员数量",
+        "空管系统"
+      ],
+      "correctIndex": 1,
+      "explanation": "适航取证是商业化前提，全球仅三款通过"
+    },
+    {
+      "question": "哪个AI技术对无人机自主飞行影响最大？",
+      "options": [
+        "自然语言处理",
+        "视觉SLAM与避障",
+        "推荐系统",
+        "文本生成"
+      ],
+      "correctIndex": 1,
+      "explanation": "视觉SLAM是无人机自主导航核心"
+    },
+    {
+      "question": "全球首个获适航证的eVTOL企业是？",
+      "options": [
+        "小鹏汇天",
+        "亿航智能",
+        "峰飞航空",
+        "腾讯"
+      ],
+      "correctIndex": 1,
+      "explanation": "亿航智能2023年获TC"
+    }
+  ],
+  "compareData": {
+    "market": "中国低空经济",
+    "cagr": "28.5% (2020-2024)",
+    "cr5": "45% (头部集中度高)",
+    "stage": "成长期",
+    "aiPenetration": "Medium-High（运营端高，制造端中）",
+    "barrier": "适航取证（TCA/PC）",
+    "salesCycle": "12-24个月（B端）",
+    "topPlayers": "亿航智能、小鹏汇天、峰飞航空、星逻智能、云圣智能",
+    "strength": "政策支持+资本热度+场景丰富",
+    "weakness": "法规滞后+空域开放不足+人才稀缺"
+  },
+  "sources": [
+    "赛迪顾问《中国低空经济发展研究报告(2024)》",
+    "中国民航局《低空飞行服务保障体系建设意见》",
+    "亿航智能2024年度财报",
+    "中信证券《低空经济行业深度报告》",
+    "工信部《通用航空装备创新应用实施方案(2024-2030)》"
+  ],
+  "slug": "low-altitude-economy"
+}

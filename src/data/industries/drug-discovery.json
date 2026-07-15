@@ -1,0 +1,353 @@
+{
+  "name": "AI + 药物发现",
+  "emoji": "💊",
+  "oneLiner": "AI重构新药研发R&D价值链，缩短周期、降低失败率",
+  "stage": "growth",
+  "heroDeck": "临床提速2倍",
+  "heroHook": "2024年AI辅助候选药进入临床数增50%",
+  "tags": [
+    {
+      "label": "500+亿",
+      "variant": "hot"
+    }
+  ],
+  "headlineMetrics": [
+    {
+      "label": "AI药物发现市场规模(2024)",
+      "value": "15",
+      "unit": "亿美元",
+      "year": 2024,
+      "growthRate": 0.42,
+      "trend": "up",
+      "source": "Frost & Sullivan",
+      "insight": "年增速超40%，远超传统CRO"
+    },
+    {
+      "label": "AI+药物发现CAGR(2019-2024)",
+      "value": "38.5",
+      "unit": "%",
+      "year": 2024,
+      "growthRate": 0.385,
+      "trend": "up",
+      "source": "Grand View Research",
+      "insight": "资本涌入推动复合增长"
+    },
+    {
+      "label": "AI渗透率(研发管线占比)",
+      "value": "15",
+      "unit": "%",
+      "year": 2024,
+      "trend": "up",
+      "source": "Pharma Intelligence",
+      "insight": "头部药企AI管线占比已超20%"
+    },
+    {
+      "label": "关键壁垒: 湿实验验证能力",
+      "value": "1200",
+      "unit": "家(拥有内部湿实验的AI公司)",
+      "year": 2024,
+      "growthRate": 0.33,
+      "trend": "up",
+      "source": "CB Insights(估算)",
+      "insight": "AI+湿实验闭环成竞争分水岭"
+    },
+    {
+      "label": "头部企业市占率(英伟达)",
+      "value": "18",
+      "unit": "%(AI算力份额)",
+      "year": 2024,
+      "trend": "up",
+      "source": "IDC(估算)",
+      "insight": "算力基础设施主导生态"
+    }
+  ],
+  "valueChain": {
+    "upstream": {
+      "name": "上游 · 数据与算力",
+      "aiPenetration": "very_high",
+      "nodes": [
+        {
+          "name": "高通量测序数据",
+          "valueShare": 15,
+          "marginRange": [
+            40,
+            60
+          ]
+        },
+        {
+          "name": "AI算力平台(GPU/云)",
+          "valueShare": 20,
+          "marginRange": [
+            30,
+            50
+          ]
+        },
+        {
+          "name": "湿实验验证服务",
+          "valueShare": 15,
+          "marginRange": [
+            50,
+            70
+          ]
+        }
+      ]
+    },
+    "midstream": {
+      "name": "中游 · AI模型与平台",
+      "aiPenetration": "high",
+      "nodes": [
+        {
+          "name": "生成模型(DrugGPT/扩散模型)",
+          "valueShare": 20,
+          "marginRange": [
+            20,
+            40
+          ]
+        },
+        {
+          "name": "分子筛选与预测平台",
+          "valueShare": 15,
+          "marginRange": [
+            25,
+            45
+          ]
+        },
+        {
+          "name": "临床前AI代理",
+          "valueShare": 10,
+          "marginRange": [
+            30,
+            50
+          ]
+        }
+      ]
+    },
+    "downstream": {
+      "name": "下游 · 制药与临床",
+      "aiPenetration": "medium",
+      "nodes": [
+        {
+          "name": "靶点发现",
+          "valueShare": 10,
+          "marginRange": [
+            15,
+            30
+          ]
+        },
+        {
+          "name": "候选化合物优化",
+          "valueShare": 10,
+          "marginRange": [
+            20,
+            35
+          ]
+        },
+        {
+          "name": "临床试验设计",
+          "valueShare": 10,
+          "marginRange": [
+            10,
+            25
+          ]
+        }
+      ]
+    }
+  },
+  "playerCategories": [
+    {
+      "category": "巨头/平台型",
+      "players": [
+        {
+          "name": "英伟达",
+          "description": "GPU算力+BioNeMo开源药物发现平台，垄断训练与推理"
+        },
+        {
+          "name": "Google/DeepMind",
+          "description": "AlphaFold3蛋白质结构预测；Isomorphic Labs靶点发现"
+        },
+        {
+          "name": "微软",
+          "description": "Azure+EvoDiff扩散模型，基于AI的分子生成"
+        }
+      ]
+    },
+    {
+      "category": "垂直领域龙头",
+      "players": [
+        {
+          "name": "Recursion Pharmaceuticals",
+          "description": "高通量湿实验+AI模型闭环，进入临床II期"
+        },
+        {
+          "name": "Insilico Medicine",
+          "description": "端到端AI管线，肾纤维化候选药进入II期"
+        },
+        {
+          "name": "Schrödinger",
+          "description": "物理+AI分子模拟软件，药企大客户订阅"
+        }
+      ]
+    },
+    {
+      "category": "AI创业新锐",
+      "players": [
+        {
+          "name": "晶泰科技",
+          "description": "AI+量子物理+自动化湿实验平台，专注难成药靶点"
+        },
+        {
+          "name": "百图生科",
+          "description": "基因数据+蛋白质设计AI，聚焦肿瘤免疫"
+        },
+        {
+          "name": "英矽智能",
+          "description": "生成式AI早期药物发现，多管线授权合作"
+        }
+      ]
+    },
+    {
+      "category": "隐形冠军",
+      "players": [
+        {
+          "name": "Atomwise",
+          "description": "AI虚拟筛选技术授权给多家Top30药企"
+        },
+        {
+          "name": "BenevolentAI",
+          "description": "知识图谱+临床数据AI，已推动两个项目至临床"
+        },
+        {
+          "name": "Enamine",
+          "description": "化合物库+AI筛选服务，全球最大合成化学品库"
+        }
+      ]
+    }
+  ],
+  "aiOpportunities": [
+    {
+      "title": "AI驱动靶点发现-失败率预测",
+      "maturityScore": 3,
+      "valueCeilingScore": 4,
+      "verdict": "scaling"
+    },
+    {
+      "title": "生成式分子设计(多任务优化)",
+      "maturityScore": 3,
+      "valueCeilingScore": 5,
+      "verdict": "pre-boom"
+    },
+    {
+      "title": "AI临床方案优化(患者分层/终点选择)",
+      "maturityScore": 2,
+      "valueCeilingScore": 4,
+      "verdict": "future"
+    }
+  ],
+  "portersFive": [
+    {
+      "force": "新进入者威胁",
+      "intensity": 4,
+      "rationale": "资本涌入且开源模型降低技术门槛，但湿实验验证能力壁垒高"
+    },
+    {
+      "force": "供应商议价能力",
+      "intensity": 4,
+      "rationale": "上游GPU/云算力被英伟达等寡头控制，定价权强"
+    },
+    {
+      "force": "买方议价能力",
+      "intensity": 3,
+      "rationale": "大型药企为买方，但AI能大幅减少失败成本，替代弱"
+    },
+    {
+      "force": "替代品威胁",
+      "intensity": 2,
+      "rationale": "传统CRO和高通量筛选可替代部分，但AI效率优势显著"
+    },
+    {
+      "force": "现有竞争者强度",
+      "intensity": 4,
+      "rationale": "数百家AI药企争夺项目与融资，但头部已形成差异化"
+    }
+  ],
+  "trends": [
+    {
+      "title": "从虚拟筛选到湿实验闭环",
+      "body": "AI模型预测准确度依赖高质量实验反馈；2024年头部玩家自建自动化湿实验室",
+      "callout": "AI PM需设计数据飞轮，将实际实验失败样本转化为训练数据"
+    },
+    {
+      "title": "生成式AI主导分子设计",
+      "body": "扩散模型与GPT架构被用于从头生成全新骨架；传统虚拟库筛选逐渐边缘化",
+      "callout": "模型输出可解释性与多目标优化(ADMET)是产品差异化关键"
+    }
+  ],
+  "myths": [
+    {
+      "myth": "AI能完全替代传统药物发现",
+      "reality": "AI主要提速早期阶段，临床失败率暂无显著降低；湿实验仍不可或缺"
+    },
+    {
+      "myth": "拥有公开数据即可训练优秀模型",
+      "reality": "私有湿实验数据+高通量验证能力决定模型精度，数据飞轮才是核心资产"
+    },
+    {
+      "myth": "AI药物发现公司都能快速成药",
+      "reality": "多数公司仍处于技术授权和专利卖药阶段，自研管线进入临床的不足5%"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "AI药物发现领域最关键的竞争壁垒是什么？",
+      "options": [
+        "A: 模型参数量与架构",
+        "B: 私有湿实验数据与自动化闭环",
+        "C: 算力规模(GPU卡数)",
+        "D: 团队学术论文数量"
+      ],
+      "correctIndex": 1,
+      "explanation": "湿实验闭环保证数据飞轮，防止过拟合(上游+中游壁垒)"
+    },
+    {
+      "question": "以下哪项是AI药物发现的典型应用场景？",
+      "options": [
+        "A: AI辅助基因编辑",
+        "B: 生成式分子从头设计",
+        "C: AI诊断病理切片",
+        "D: AI药物生产自动化"
+      ],
+      "correctIndex": 1,
+      "explanation": "AI在分子设计与虚拟筛选应用最广(下游场景)"
+    },
+    {
+      "question": "AI药物发现行业目前处于什么阶段？",
+      "options": [
+        "A: 实验研究期",
+        "B: 规模化初期，个别管线进入临床",
+        "C: 全面替代传统CRO",
+        "D: 完全成熟，无新进入者"
+      ],
+      "correctIndex": 1,
+      "explanation": "头部公司管线至临床II期，但多数仍处技术授权(增长期)"
+    }
+  ],
+  "compareData": {
+    "market": "AI药物发现(2024年15亿美元)",
+    "cagr": "38.5%",
+    "cr5": "60%(算力+平台)",
+    "stage": "growth",
+    "aiPenetration": "15%(管线占比)",
+    "barrier": "湿实验验证+数据飞轮",
+    "salesCycle": "12-18个月",
+    "topPlayers": "英伟达, Insilico, Recursion",
+    "strength": "效率提升2-5倍",
+    "weakness": "临床失败率仍高"
+  },
+  "sources": [
+    "Frost & Sullivan《AI in Drug Discovery 2024》",
+    "Grand View Research《AI Drug Discovery Market 2024》",
+    "Pharma Intelligence《2024 AI in Pharma R&D》",
+    "CB Insights《Key Trends in AI Drug Discovery 2024》(估算)"
+  ],
+  "slug": "drug-discovery"
+}

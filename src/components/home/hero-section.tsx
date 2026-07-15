@@ -22,7 +22,7 @@ export function HeroSection() {
 
       <div className="flex justify-center gap-12 max-[768px]:gap-6 max-[768px]:flex-wrap font-serif mt-10">
         <div>
-          <div className="text-[2.2rem] font-black text-crimson max-[768px]:text-[1.6rem]">8+</div>
+          <div className="text-[2.2rem] font-black text-crimson max-[768px]:text-[1.6rem]">15+</div>
           <div className="text-[0.78rem] text-cool-gray mt-1">深度覆盖行业</div>
         </div>
         <div>

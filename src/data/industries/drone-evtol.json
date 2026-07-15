@@ -1,0 +1,386 @@
+{
+  "name": "AI + 无人机/eVTOL",
+  "emoji": "✈️",
+  "oneLiner": "低空经济载具智能化，政策驱动+AI赋能，万亿赛道开启",
+  "stage": "growth",
+  "heroDeck": "低空经济爆发前夜",
+  "heroHook": "2026年eVTOL取证，AI护航安全飞行",
+  "tags": [
+    {
+      "label": "万亿级",
+      "variant": "hot"
+    },
+    {
+      "label": "政策红利",
+      "variant": "new"
+    },
+    {
+      "label": "AI赋能",
+      "variant": "hot"
+    }
+  ],
+  "headlineMetrics": [
+    {
+      "label": "2024年中国低空经济市场规模",
+      "value": "5059",
+      "unit": "亿元",
+      "year": 2024,
+      "growthRate": 0.33,
+      "trend": "up",
+      "source": "赛迪顾问",
+      "insight": "预测2026年破万亿"
+    },
+    {
+      "label": "无人机eVTOL年均复合增速",
+      "value": "28",
+      "unit": "%",
+      "year": 2026,
+      "growthRate": 0.28,
+      "trend": "up",
+      "source": "摩根士丹利",
+      "insight": "2040年全球达万亿美元"
+    },
+    {
+      "label": "无人机行业CR5（民用）",
+      "value": "68",
+      "unit": "%",
+      "year": 2023,
+      "trend": "flat",
+      "source": "Frost & Sullivan",
+      "insight": "大疆一家独大占54%"
+    },
+    {
+      "label": "适航取证数量（eVTOL型号）",
+      "value": "3",
+      "unit": "个",
+      "year": 2024,
+      "trend": "up",
+      "source": "中国民航局",
+      "insight": "亿航EH216-S全球首获"
+    },
+    {
+      "label": "大疆全球消费级无人机市占率",
+      "value": "70",
+      "unit": "%",
+      "year": 2023,
+      "trend": "flat",
+      "source": "Drone Industry Insights",
+      "insight": "技术壁垒+供应链优势"
+    }
+  ],
+  "valueChain": {
+    "upstream": {
+      "name": "上游 · 核心部件",
+      "aiPenetration": "medium",
+      "nodes": [
+        {
+          "name": "飞控系统",
+          "valueShare": 20,
+          "marginRange": [
+            30,
+            50
+          ]
+        },
+        {
+          "name": "动力电池",
+          "valueShare": 15,
+          "marginRange": [
+            10,
+            20
+          ]
+        },
+        {
+          "name": "电机电调",
+          "valueShare": 10,
+          "marginRange": [
+            20,
+            35
+          ]
+        },
+        {
+          "name": "机身复合材料",
+          "valueShare": 5,
+          "marginRange": [
+            15,
+            25
+          ]
+        }
+      ]
+    },
+    "midstream": {
+      "name": "中游 · 整机制造与集成",
+      "aiPenetration": "high",
+      "nodes": [
+        {
+          "name": "无人机整机设计",
+          "valueShare": 25,
+          "marginRange": [
+            25,
+            40
+          ]
+        },
+        {
+          "name": "eVTOL总装与测试",
+          "valueShare": 15,
+          "marginRange": [
+            10,
+            20
+          ]
+        },
+        {
+          "name": "AI算法与软件平台",
+          "valueShare": 10,
+          "marginRange": [
+            40,
+            60
+          ]
+        }
+      ]
+    },
+    "downstream": {
+      "name": "下游 · 运营与服务",
+      "aiPenetration": "very_high",
+      "nodes": [
+        {
+          "name": "城市空中交通UAM运营",
+          "valueShare": 10,
+          "marginRange": [
+            15,
+            30
+          ]
+        },
+        {
+          "name": "物流配送",
+          "valueShare": 10,
+          "marginRange": [
+            5,
+            15
+          ]
+        },
+        {
+          "name": "巡检/测绘/农业应用",
+          "valueShare": 15,
+          "marginRange": [
+            20,
+            40
+          ]
+        }
+      ]
+    }
+  },
+  "playerCategories": [
+    {
+      "category": "巨头/平台型",
+      "players": [
+        {
+          "name": "大疆创新",
+          "description": "全球消费级无人机霸主，飞控+AI视觉避障技术领先"
+        },
+        {
+          "name": "亿航智能",
+          "description": "首家获eVTOL适航证，UAM商业运营先发优势"
+        },
+        {
+          "name": "吉利科技(沃飞长空)",
+          "description": "依托汽车供应链，eVTOL研发与车企协同"
+        }
+      ]
+    },
+    {
+      "category": "垂直领域龙头",
+      "players": [
+        {
+          "name": "极飞科技",
+          "description": "农业无人机龙头，AI精准喷洒+自主作业"
+        },
+        {
+          "name": "中科云图",
+          "description": "电力巡检无人机，AI缺陷识别算法优势"
+        },
+        {
+          "name": "丰翼科技(顺丰)",
+          "description": "物流无人机，末端配送网络+AI调度"
+        }
+      ]
+    },
+    {
+      "category": "AI创业新锐",
+      "players": [
+        {
+          "name": "云圣智能",
+          "description": "全自动无人机巡检系统，AI自主机库与路径规划"
+        },
+        {
+          "name": "星逻智能",
+          "description": "无人机机库与AI数据平台，实现无人值守作业"
+        },
+        {
+          "name": "傲势科技",
+          "description": "垂直起降固定翼无人机，AI目标识别与长航时"
+        }
+      ]
+    },
+    {
+      "category": "隐形冠军",
+      "players": [
+        {
+          "name": "上海峰飞航空",
+          "description": "eVTOL货运机型V2000CG，复合翼构型+AI飞控"
+        },
+        {
+          "name": "山河星航",
+          "description": "轻型运动飞机与无人机，扎实的航空制造底蕴"
+        },
+        {
+          "name": "成都纵横自动化",
+          "description": "工业级垂直起降固定翼，AI赋能全自动作业"
+        }
+      ]
+    }
+  ],
+  "aiOpportunities": [
+    {
+      "title": "AI视觉自主避障与精准降落",
+      "maturityScore": 4,
+      "valueCeilingScore": 4,
+      "verdict": "scaling"
+    },
+    {
+      "title": "AI多源传感器融合的eVTOL航电系统",
+      "maturityScore": 3,
+      "valueCeilingScore": 5,
+      "verdict": "pre-boom"
+    },
+    {
+      "title": "AI电网/管道缺陷识别与诊断",
+      "maturityScore": 5,
+      "valueCeilingScore": 3,
+      "verdict": "proven"
+    },
+    {
+      "title": "AI城市低空交通管理与航线规划",
+      "maturityScore": 2,
+      "valueCeilingScore": 5,
+      "verdict": "future"
+    },
+    {
+      "title": "AI无人机集群协同作业系统",
+      "maturityScore": 3,
+      "valueCeilingScore": 4,
+      "verdict": "scaling"
+    }
+  ],
+  "portersFive": [
+    {
+      "force": "新进入者威胁",
+      "intensity": 4,
+      "rationale": "适航认证+技术壁垒极高，但政策鼓励新玩家入局"
+    },
+    {
+      "force": "供应商议价能力",
+      "intensity": 3,
+      "rationale": "飞控芯片、电池等核心部件依赖进口，议价权中等"
+    },
+    {
+      "force": "买方议价能力",
+      "intensity": 3,
+      "rationale": "政府采购、行业大客户议价能力强，消费级弱"
+    },
+    {
+      "force": "替代品威胁",
+      "intensity": 2,
+      "rationale": "传统直升机、固定翼航测是替代品但效率成本劣势明显"
+    },
+    {
+      "force": "现有竞争者强度",
+      "intensity": 4,
+      "rationale": "大疆垄断消费级，但eVTOL新兴赛道竞争激烈"
+    }
+  ],
+  "trends": [
+    {
+      "title": "适航取证从个例走向批量",
+      "body": "2024年亿航EH216-S获证，峰飞、沃飞紧跟，预计2026年迎来取证潮。取证后运营中心从制造转向服务。",
+      "callout": "为AI产品经理提供机队管理、安全监控等SaaS平台机会"
+    },
+    {
+      "title": "低空空域管理改革与数字化",
+      "body": "深圳、合肥等地开放低空空域，启动UOM系统。空域数字化需AI流量预测与冲突化解。",
+      "callout": "开发智能空域调度算法，是政府服务级AI产品的入口"
+    },
+    {
+      "title": "eVTOL从货运先行到载人商用",
+      "body": "峰飞V2000CG货运版先行，载人版研发加速。货运场景验证飞控与安全后复用至载人。",
+      "callout": "货运数据的飞控模型迁移学习，造就AI在适航中的核心角色"
+    }
+  ],
+  "myths": [
+    {
+      "myth": "无人机/eVTOL就是会飞的照相机/汽车",
+      "reality": "本质是航空器，适航安全是底线，AI仅辅助飞控与感知"
+    },
+    {
+      "myth": "eVTOL很快将全面替代出租车",
+      "reality": "2028年前仅限特定观光/货运航线，载人商业化至少5-10年"
+    },
+    {
+      "myth": "AI直接控制飞机不需要飞行员",
+      "reality": "适航要求人机协同，AI只能辅助决策，安全冗余由人类管控"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "全球首款获得型号合格证（TC）的载人eVTOL来自哪家公司？",
+      "options": [
+        "大疆创新",
+        "亿航智能",
+        "峰飞航空",
+        "沃飞长空"
+      ],
+      "correctIndex": 1,
+      "explanation": "亿航EH216-S于2023年获得中国民航局TC，是全球首例。"
+    },
+    {
+      "question": "目前eVTOL商业化运营最先落地的场景是什么？",
+      "options": [
+        "城市出租",
+        "医疗急救",
+        "低空物流货运",
+        "空中观光"
+      ],
+      "correctIndex": 2,
+      "explanation": "峰飞V2000CG等货运型先行验证安全与效率。"
+    },
+    {
+      "question": "AI在无人机巡检中的核心价值是什么？",
+      "options": [
+        "提升飞行速度",
+        "自动识别缺陷",
+        "延长续航时间",
+        "降低制造成本"
+      ],
+      "correctIndex": 1,
+      "explanation": "通过视觉AI自动检测巡检图像中的异常，大幅提升效率。"
+    }
+  ],
+  "compareData": {
+    "market": "低空经济（无人机+eVTOL）",
+    "cagr": "28% (2023-2030)",
+    "cr5": "68% (民用无人机)",
+    "stage": "成长爆发期",
+    "aiPenetration": "高 (飞控、避障、巡检)",
+    "barrier": "适航认证+飞控算法",
+    "salesCycle": "B端6-12月，C端即时",
+    "topPlayers": "大疆、亿航、极飞、峰飞",
+    "strength": "政策支持、供应链成熟",
+    "weakness": "空域管理滞后、载人安全验证长"
+  },
+  "sources": [
+    "中国民航局《无人驾驶航空器飞行管理暂行条例》",
+    "赛迪顾问《2024年中国低空经济产业研究报告》",
+    "摩根士丹利《eVTOL市场预测报告》",
+    "Frost & Sullivan《全球无人机市场分析》",
+    "亿航智能公告（EH216-S适航证信息）"
+  ],
+  "slug": "drone-evtol"
+}

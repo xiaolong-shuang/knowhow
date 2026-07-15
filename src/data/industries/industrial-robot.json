@@ -1,0 +1,352 @@
+{
+  "name": "AI + 工业机器人",
+  "emoji": "🤖",
+  "oneLiner": "AI赋能工业机器人从刚性自动化向柔性自适应跃迁",
+  "stage": "growth",
+  "heroDeck": "工业机器人步入AI红利期",
+  "heroHook": "2024年中国工业机器人安装量29.6万台，AI渗透率跃至12%",
+  "tags": [
+    {
+      "label": "290亿规模",
+      "variant": "hot"
+    },
+    {
+      "label": "12% AI渗透",
+      "variant": "new"
+    },
+    {
+      "label": "CR3=38%",
+      "variant": "info"
+    }
+  ],
+  "headlineMetrics": [
+    {
+      "label": "2024年中国工业机器人市场规模(销售额)",
+      "value": "290",
+      "unit": "亿人民币",
+      "year": 2024,
+      "growthRate": 0.1,
+      "trend": "up",
+      "source": "MIR睿工业",
+      "insight": "增速放缓但存量安装达全球第一，AI撬动存量改造市场"
+    },
+    {
+      "label": "2024年工业机器人安装量(中国市场)",
+      "value": "29.6",
+      "unit": "万台",
+      "year": 2024,
+      "growthRate": 0.04,
+      "trend": "up",
+      "source": "IFR",
+      "insight": "增量接近饱和，AI赋能存量升级空间巨大"
+    },
+    {
+      "label": "行业集中度CR5(2024年)",
+      "value": "38",
+      "unit": "%",
+      "year": 2024,
+      "growthRate": 0.05,
+      "trend": "flat",
+      "source": "MIR睿工业",
+      "insight": "国产替代加速，前五名中3家为国产品牌"
+    },
+    {
+      "label": "核心壁垒指标：RV减速器国产化率",
+      "value": "35",
+      "unit": "%",
+      "year": 2024,
+      "growthRate": 0.2,
+      "trend": "up",
+      "source": "中国机器人产业联盟",
+      "insight": "精密减速器仍为卡脖子环节，AI提升产线替换周期"
+    },
+    {
+      "label": "AI渗透率(已部署AI功能的工业机器人销量占比)",
+      "value": "12",
+      "unit": "%",
+      "year": 2024,
+      "growthRate": 0.71,
+      "trend": "up",
+      "source": "高工机器人网(估算)",
+      "insight": "AI视觉与路径规划成主要渗透点，预计2027年超35%"
+    }
+  ],
+  "valueChain": {
+    "upstream": {
+      "name": "上游 · 核心零部件",
+      "aiPenetration": "low",
+      "nodes": [
+        {
+          "name": "精密减速器",
+          "valueShare": 30,
+          "marginRange": [
+            20,
+            35
+          ]
+        },
+        {
+          "name": "伺服电机",
+          "valueShare": 20,
+          "marginRange": [
+            12,
+            22
+          ]
+        },
+        {
+          "name": "控制系统",
+          "valueShare": 10,
+          "marginRange": [
+            25,
+            40
+          ]
+        }
+      ]
+    },
+    "midstream": {
+      "name": "中游 · 本体制造",
+      "aiPenetration": "medium",
+      "nodes": [
+        {
+          "name": "六轴工业机器人",
+          "valueShare": 20,
+          "marginRange": [
+            5,
+            15
+          ]
+        },
+        {
+          "name": "SCARA工业机器人",
+          "valueShare": 10,
+          "marginRange": [
+            3,
+            10
+          ]
+        }
+      ]
+    },
+    "downstream": {
+      "name": "下游 · 系统集成与应用",
+      "aiPenetration": "high",
+      "nodes": [
+        {
+          "name": "焊接/涂装集成",
+          "valueShare": 15,
+          "marginRange": [
+            10,
+            25
+          ]
+        },
+        {
+          "name": "搬运/码垛集成",
+          "valueShare": 10,
+          "marginRange": [
+            5,
+            18
+          ]
+        }
+      ]
+    }
+  },
+  "playerCategories": [
+    {
+      "category": "巨头/平台型",
+      "players": [
+        {
+          "name": "发那科",
+          "description": "强在核心算法与PLC生态，AI路径规划领先"
+        },
+        {
+          "name": "ABB",
+          "description": "机器人+自动化集成，AI视觉引导搭载于IRB系列"
+        },
+        {
+          "name": "库卡",
+          "description": "被美的收购后强化中国本地化AI应用落地"
+        }
+      ]
+    },
+    {
+      "category": "垂直领域龙头",
+      "players": [
+        {
+          "name": "埃斯顿",
+          "description": "国产六轴龙头，结合AI在焊接自动化中降本"
+        },
+        {
+          "name": "汇川技术",
+          "description": "伺服+PLC王者，AI驱动轻量级协作机器人"
+        }
+      ]
+    },
+    {
+      "category": "AI创业新锐",
+      "players": [
+        {
+          "name": "梅卡曼德",
+          "description": "AI 3D视觉引导，专注无序抓取与拆垛"
+        },
+        {
+          "name": "节卡机器人",
+          "description": "协作机器人+AI安全交互，主打中小客户"
+        }
+      ]
+    },
+    {
+      "category": "隐形冠军",
+      "players": [
+        {
+          "name": "绿的谐波",
+          "description": "谐波减速器市占率超全球15%，AI辅助精密设计"
+        },
+        {
+          "name": "纳博特斯克",
+          "description": "RV减速器全球霸主，AI用于装配良率提升"
+        }
+      ]
+    }
+  ],
+  "aiOpportunities": [
+    {
+      "title": "AI视觉引导的随机分拣",
+      "maturityScore": 4,
+      "valueCeilingScore": 3,
+      "verdict": "scaling"
+    },
+    {
+      "title": "AI焊接工艺自适应调节",
+      "maturityScore": 3,
+      "valueCeilingScore": 2,
+      "verdict": "pre-boom"
+    },
+    {
+      "title": "AI运维预测性维护",
+      "maturityScore": 3,
+      "valueCeilingScore": 3,
+      "verdict": "demand"
+    },
+    {
+      "title": "AI路径规划（多机协同）",
+      "maturityScore": 3,
+      "valueCeilingScore": 4,
+      "verdict": "blue-ocean"
+    },
+    {
+      "title": "AI装配自适应力控",
+      "maturityScore": 2,
+      "valueCeilingScore": 3,
+      "verdict": "future"
+    }
+  ],
+  "portersFive": [
+    {
+      "force": "新进入者威胁",
+      "intensity": 3,
+      "rationale": "核心零部件壁垒高，但AI软件层降低了应用集成门槛"
+    },
+    {
+      "force": "供应商议价能力",
+      "intensity": 4,
+      "rationale": "精密减速器与伺服电机全球供应商集中，国产替代尚在爬坡"
+    },
+    {
+      "force": "买方议价能力",
+      "intensity": 4,
+      "rationale": "汽车/3C大客户集采压价，本体利润率已压缩至个位数"
+    },
+    {
+      "force": "替代品威胁",
+      "intensity": 2,
+      "rationale": "协作机器人暂无法完全替代高负载六轴，功能互补为主"
+    },
+    {
+      "force": "现有竞争者强度",
+      "intensity": 5,
+      "rationale": "全球四大家族+国产百余品牌价格战，同质化严重"
+    }
+  ],
+  "trends": [
+    {
+      "title": "协作机器人从示教走向免编程",
+      "body": "2024年协作机器人占比达35%，AI自学习逐步替代人工示教。非汽车行业增速超30%",
+      "callout": "开发零代码AI示教工具，降低中小工厂部署门槛"
+    },
+    {
+      "title": "核心零部件国产化提速",
+      "body": "RV减速器国产化率升至35%，绿的谐波等企业全球份额突破10%。但高端市场仍被纳博控制",
+      "callout": "AI无法直接突破机械精度，但可优化制造良率降低国产品牌成本"
+    },
+    {
+      "title": "AI视觉成为集成标配",
+      "body": "超过40%的新增项目集成AI视觉模块，2D vs 3D方案价格差缩小到1:3",
+      "callout": "AI视觉模组可独立收费，且黏性高于本体销售"
+    }
+  ],
+  "myths": [
+    {
+      "myth": "工业机器人已经很强，不需要AI也能用",
+      "reality": "传统机器人只能按固定轨迹运行，AI是适应非标场景（如多品种小批量）的唯一路径"
+    },
+    {
+      "myth": "AI工业机器人马上就能替代所有工人",
+      "reality": "目前仅适用重复性工序，复杂装配仍依赖人，AI提升的是柔性而非完全替代"
+    },
+    {
+      "myth": "中国工业机器人企业靠AI超车",
+      "reality": "核心零部件差距依然巨大，AI是差异化工具而非替代基本功"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "2024年中国工业机器人市场利润率最高的环节是？",
+      "options": [
+        "A. 六轴本体制造",
+        "B. 精密减速器",
+        "C. 系统集成",
+        "D. 伺服电机"
+      ],
+      "correctIndex": 1,
+      "explanation": "精密减速器毛利率20-35%，六轴本体仅5-15%，上游溢价力强"
+    },
+    {
+      "question": "哪一项是当前AI在工业机器人中最成熟的落地场景？",
+      "options": [
+        "A. AI焊接工艺自适应",
+        "B. AI视觉引导分拣",
+        "C. AI多机协同路径规划",
+        "D. AI装配力控"
+      ],
+      "correctIndex": 1,
+      "explanation": "AI视觉引导分拣成熟度评分4（规模化初期），已超其他场景"
+    },
+    {
+      "question": "以下哪家企业在AI视觉引导无序抓取领域最有代表性？",
+      "options": [
+        "A. 发那科",
+        "B. 梅卡曼德",
+        "C. 节卡机器人",
+        "D. 美的"
+      ],
+      "correctIndex": 1,
+      "explanation": "梅卡曼德专注AI 3D视觉无序抓取，是AI创业新锐的典型"
+    }
+  ],
+  "compareData": {
+    "market": "中国工业机器人市场（约290亿人民币）",
+    "cagr": "10%（2020-2024年销售额CAGR）",
+    "cr5": "38%（前5企业市占率）",
+    "stage": "成熟期（增量放缓，存量升级）",
+    "aiPenetration": "12%（已部署AI功能的销量占比）",
+    "barrier": "核心零部件精度与供应链（减速器、伺服）",
+    "salesCycle": "6-12个月（集成项目更长）",
+    "topPlayers": "发那科、ABB、库卡、埃斯顿、汇川",
+    "strength": "供应商溢价高，国产替代带来毛利率改善",
+    "weakness": "本体同质化严重，价格战蚕食利润"
+  },
+  "sources": [
+    "IFR《2024世界机器人报告》",
+    "MIR睿工业《2024年中国工业机器人市场白皮书》",
+    "高工机器人网《2024年AI+工业机器人应用调研》",
+    "中国机器人产业联盟《2024年核心零部件国产化率数据》"
+  ],
+  "slug": "industrial-robot"
+}

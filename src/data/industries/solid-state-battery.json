@@ -1,0 +1,369 @@
+{
+  "name": "AI + 固态电池",
+  "emoji": "🔋",
+  "oneLiner": "AI加速固态电解质新材料发现与工艺优化，推动下一代电池商业化",
+  "stage": "growth",
+  "heroDeck": "AI驱动固态电池革命",
+  "heroHook": "全球研发投入年增35%，2025年试产",
+  "tags": [
+    {
+      "label": "500+亿",
+      "variant": "hot"
+    },
+    {
+      "label": "AI材料筛选",
+      "variant": "new"
+    }
+  ],
+  "headlineMetrics": [
+    {
+      "label": "2024年全球固态电池市场规模",
+      "value": "32",
+      "unit": "亿",
+      "year": 2024,
+      "growthRate": 0.52,
+      "trend": "up",
+      "source": "SNE Research",
+      "insight": "小基数高增速，2026年将突破百亿"
+    },
+    {
+      "label": "2020-2024年行业CAGR",
+      "value": "48",
+      "unit": "%",
+      "year": 2024,
+      "growthRate": 0.48,
+      "trend": "up",
+      "source": "QY Research",
+      "insight": "资本涌入和技术突破双驱动"
+    },
+    {
+      "label": "中国固态电池专利CR5",
+      "value": "67",
+      "unit": "%",
+      "year": 2023,
+      "growthRate": 0.15,
+      "trend": "up",
+      "source": "国家知识产权局",
+      "insight": "宁德时代、比亚迪、中科院霸榜"
+    },
+    {
+      "label": "硫化物电解质离子电导率最高纪录",
+      "value": "32",
+      "unit": "mS/cm",
+      "year": 2024,
+      "growthRate": 0.1,
+      "trend": "up",
+      "source": "Nature Energy",
+      "insight": "突破液态电解液水平，但界面稳定性待解"
+    },
+    {
+      "label": "宁德时代固态电池研发投入占比",
+      "value": "12",
+      "unit": "%",
+      "year": 2023,
+      "growthRate": 0.2,
+      "trend": "up",
+      "source": "公司年报",
+      "insight": "巨头重注，加速产业化进程"
+    }
+  ],
+  "valueChain": {
+    "upstream": {
+      "name": "上游 · 原材料",
+      "aiPenetration": "high",
+      "nodes": [
+        {
+          "name": "锂箔",
+          "valueShare": 20,
+          "marginRange": [
+            10,
+            20
+          ]
+        },
+        {
+          "name": "硫化物陶瓷粉体",
+          "valueShare": 18,
+          "marginRange": [
+            20,
+            35
+          ]
+        },
+        {
+          "name": "氧化物电解质粉体",
+          "valueShare": 12,
+          "marginRange": [
+            15,
+            28
+          ]
+        }
+      ]
+    },
+    "midstream": {
+      "name": "中游 · 制造与系统集成",
+      "aiPenetration": "medium",
+      "nodes": [
+        {
+          "name": "电解质薄膜制备",
+          "valueShare": 25,
+          "marginRange": [
+            12,
+            22
+          ]
+        },
+        {
+          "name": "电芯组装",
+          "valueShare": 15,
+          "marginRange": [
+            8,
+            15
+          ]
+        },
+        {
+          "name": "BMS与热管理",
+          "valueShare": 10,
+          "marginRange": [
+            18,
+            30
+          ]
+        }
+      ]
+    },
+    "downstream": {
+      "name": "下游 · 应用",
+      "aiPenetration": "high",
+      "nodes": [
+        {
+          "name": "电动汽车电池包",
+          "valueShare": 60,
+          "marginRange": [
+            5,
+            12
+          ]
+        },
+        {
+          "name": "消费电子电池",
+          "valueShare": 15,
+          "marginRange": [
+            8,
+            15
+          ]
+        },
+        {
+          "name": "储能系统",
+          "valueShare": 25,
+          "marginRange": [
+            6,
+            10
+          ]
+        }
+      ]
+    }
+  },
+  "playerCategories": [
+    {
+      "category": "巨头/平台型",
+      "players": [
+        {
+          "name": "宁德时代",
+          "description": "全栈研发，AI辅助硫化物电解质配方筛选"
+        },
+        {
+          "name": "比亚迪",
+          "description": "刀片固态电池，自研氧化物-聚合物复合路线"
+        },
+        {
+          "name": "丰田",
+          "description": "布局20年，2025年量产原型车，AI优化生产良率"
+        }
+      ]
+    },
+    {
+      "category": "垂直领域龙头",
+      "players": [
+        {
+          "name": "QuantumScape",
+          "description": "无负极锂金属固态电池，隔膜技术领先"
+        },
+        {
+          "name": "Solid Power",
+          "description": "硫化物全固态，与宝马/福特合作，AI模拟界面"
+        },
+        {
+          "name": "辉能科技",
+          "description": "氧化物固态电池，2024年建成GWh级产线"
+        }
+      ]
+    },
+    {
+      "category": "AI创业新锐",
+      "players": [
+        {
+          "name": "CuspAI",
+          "description": "AI生成固态电解质新材料，日筛选10万种结构"
+        },
+        {
+          "name": "IonQ",
+          "description": "量子计算+AI模拟离子在固态中的迁移路径"
+        }
+      ]
+    },
+    {
+      "category": "隐形冠军",
+      "players": [
+        {
+          "name": "国轩高科",
+          "description": "半固态电池已装车，AI电解液配方优化"
+        },
+        {
+          "name": "卫蓝新能源",
+          "description": "氧化物电解质批量供应，良率超90%"
+        }
+      ]
+    }
+  ],
+  "aiOpportunities": [
+    {
+      "title": "AI驱动固态电解质新材料发现",
+      "maturityScore": 3,
+      "valueCeilingScore": 5,
+      "verdict": "blue-ocean"
+    },
+    {
+      "title": "AI优化电解质-电极界面稳定性",
+      "maturityScore": 2,
+      "valueCeilingScore": 5,
+      "verdict": "future"
+    },
+    {
+      "title": "AI模拟硫化物电解质产气与副反应",
+      "maturityScore": 2,
+      "valueCeilingScore": 4,
+      "verdict": "demand"
+    },
+    {
+      "title": "AI驱动的固态电池电芯工艺参数预测",
+      "maturityScore": 3,
+      "valueCeilingScore": 4,
+      "verdict": "scaling"
+    },
+    {
+      "title": "AI缺陷检测与电解质薄膜均匀性控制",
+      "maturityScore": 4,
+      "valueCeilingScore": 3,
+      "verdict": "proven"
+    }
+  ],
+  "portersFive": [
+    {
+      "force": "新进入者威胁",
+      "intensity": 4,
+      "rationale": "材料配方壁垒高，需大量专利和know-how积累"
+    },
+    {
+      "force": "供应商议价能力",
+      "intensity": 3,
+      "rationale": "锂箔、硫化物前驱体供应集中，但可替代风险低"
+    },
+    {
+      "force": "买方议价能力",
+      "intensity": 5,
+      "rationale": "车企占下游70%用量，采购量大，压价能力强"
+    },
+    {
+      "force": "替代品威胁",
+      "intensity": 4,
+      "rationale": "液态和半固态电池性能不断突破，挤压固态市场窗口"
+    },
+    {
+      "force": "现有竞争者强度",
+      "intensity": 4,
+      "rationale": "中日韩欧超30家入局，专利诉讼和技术军备赛激烈"
+    }
+  ],
+  "trends": [
+    {
+      "title": "硫化物的胜利：AI加速离子电导率突破",
+      "body": "2020年硫化物离子电导率最高12 mS/cm，现已翻倍至32 mS/cm，AI高通量筛选是关键。新发现Li10GeP2S12类似物成为热点。",
+      "callout": "PM可关注AI材料数据库构建，数据质量决定模型精度"
+    },
+    {
+      "title": "从全固态到混合固态：AI平衡成本与性能",
+      "body": "全固态量产难，混合固态（含少量液态）成为过渡方案。AI优化液态含量和电解质配比，实现成本降30%。",
+      "callout": "混合固态是近期爆点产品，AI工艺优化需求迫切"
+    },
+    {
+      "title": "界面工程AI化：破解接触阻抗千年难题",
+      "body": "固态-液态界面接触差导致充放电效率低，AI分子动力学模拟可预测界面反应，减少试错。",
+      "callout": "AI模拟工具（如DeepMD）成新标配，需与物理实验室对接"
+    }
+  ],
+  "myths": [
+    {
+      "myth": "固态电池能量密度是液态的3-5倍",
+      "reality": "实际提升仅40-80%，但安全性显著优于液态电池"
+    },
+    {
+      "myth": "固态电池五年内全面取代锂离子电池",
+      "reality": "2030年渗透率预计不足5%，混合固态将是主流"
+    },
+    {
+      "myth": "AI能独立发现所有新材料",
+      "reality": "AI需要大量实验数据训练，且多材料合成后性能不可预测，人机协作是常态"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "以下哪项是目前固态电池商业化最大的痛点？",
+      "options": [
+        "电解质离子电导率",
+        "正极材料容量",
+        "界面接触与阻抗",
+        "负极材料成本"
+      ],
+      "correctIndex": 2,
+      "explanation": "界面阻抗导致锂枝晶生长和性能衰减，是量产瓶颈，见界面工程趋势"
+    },
+    {
+      "question": "AI在固态电池领域最主要的应用场景是？",
+      "options": [
+        "生产排程优化",
+        "新材料高通量筛选",
+        "电池回收分类",
+        "充放电策略控制"
+      ],
+      "correctIndex": 1,
+      "explanation": "AI通过分子动力学和生成模型加速电解质材料发现，见趋势一"
+    },
+    {
+      "question": "2024年硫化物电解质离子电导率最高纪录是多少？",
+      "options": [
+        "12 mS/cm",
+        "25 mS/cm",
+        "32 mS/cm",
+        "50 mS/cm"
+      ],
+      "correctIndex": 2,
+      "explanation": "32 mS/cm来自硫化物路线，见龙头指标"
+    }
+  ],
+  "compareData": {
+    "market": "全球固态电池2024年32亿，2030年望达800亿",
+    "cagr": "48%（2020-2024）",
+    "cr5": "专利CR5高达67%",
+    "stage": "早期成长，试产阶段",
+    "aiPenetration": "研发端30%，制造端10%",
+    "barrier": "材料专利壁垒高，界面稳定性难解",
+    "salesCycle": "B2B周期2-4年",
+    "topPlayers": "宁德时代、QuantumScape、丰田",
+    "strength": "安全性高、能量密度提升、长循环寿命",
+    "weakness": "成本高、界面阻抗、量产工艺不成熟"
+  },
+  "sources": [
+    "SNE Research《Global Solid-State Battery Market Report 2024》",
+    "Nature Energy 2024年第9卷固态电池专刊",
+    "国家知识产权局《中国固态电池技术专利分析报告》",
+    "QY Research《2020-2024固态电池行业CAGR统计》",
+    "宁德时代2023年度财报"
+  ],
+  "slug": "solid-state-battery"
+}

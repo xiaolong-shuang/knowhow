@@ -1,0 +1,348 @@
+{
+  "name": "AI + AIGC",
+  "emoji": "🔋",
+  "oneLiner": "AIGC从文本生成到多模态创作，重塑内容生产范式，年增速翻倍",
+  "stage": "growth",
+  "heroDeck": "生成式AI商业化元年",
+  "heroHook": "2024年中国AIGC市场386亿，3年翻倍",
+  "tags": [
+    {
+      "label": "386亿",
+      "variant": "hot"
+    },
+    {
+      "label": "CAGR 38%",
+      "variant": "hot"
+    },
+    {
+      "label": "GPT生态",
+      "variant": "new"
+    }
+  ],
+  "headlineMetrics": [
+    {
+      "label": "2024年中国AIGC市场规模",
+      "value": "386",
+      "unit": "亿人民币",
+      "year": 2024,
+      "growthRate": 0.38,
+      "trend": "up",
+      "source": "IDC《中国AIGC市场预测》",
+      "insight": "三年内翻倍至千亿级"
+    },
+    {
+      "label": "2021-2024年复合增长率",
+      "value": "38",
+      "unit": "%",
+      "year": 2024,
+      "growthRate": 0.38,
+      "trend": "up",
+      "source": "IDC",
+      "insight": "增速是软件行业的3倍"
+    },
+    {
+      "label": "AI渗透率（企业使用AIGC比例）",
+      "value": "12",
+      "unit": "%",
+      "year": 2024,
+      "growthRate": 0.5,
+      "trend": "up",
+      "source": "中国信通院《AIGC应用报告》",
+      "insight": "央企率先部署，SMB差距大"
+    },
+    {
+      "label": "核心专利持有量（全球累计）",
+      "value": "18500",
+      "unit": "件",
+      "year": 2024,
+      "growthRate": 0.45,
+      "trend": "up",
+      "source": "WIPO",
+      "insight": "中国占比超40%领先"
+    },
+    {
+      "label": "头部企业市占率（百度智能云）",
+      "value": "18",
+      "unit": "%",
+      "year": 2024,
+      "growthRate": 0.03,
+      "trend": "flat",
+      "source": "IDC",
+      "insight": "格局未定，创业公司蚕食"
+    }
+  ],
+  "valueChain": {
+    "upstream": {
+      "name": "上游 · 算力与基础模型",
+      "aiPenetration": "very_high",
+      "nodes": [
+        {
+          "name": "AI芯片（GPU/TPU）",
+          "valueShare": 25,
+          "marginRange": [
+            30,
+            60
+          ]
+        },
+        {
+          "name": "云算力平台",
+          "valueShare": 20,
+          "marginRange": [
+            15,
+            25
+          ]
+        },
+        {
+          "name": "基础大模型（LLM/视图）",
+          "valueShare": 30,
+          "marginRange": [
+            10,
+            30
+          ]
+        }
+      ]
+    },
+    "midstream": {
+      "name": "中游 · 模型调优与工具链",
+      "aiPenetration": "high",
+      "nodes": [
+        {
+          "name": "模型微调与部署服务",
+          "valueShare": 10,
+          "marginRange": [
+            20,
+            40
+          ]
+        },
+        {
+          "name": "AIGC中间件/API",
+          "valueShare": 5,
+          "marginRange": [
+            15,
+            35
+          ]
+        },
+        {
+          "name": "数据标注与合成",
+          "valueShare": 5,
+          "marginRange": [
+            10,
+            20
+          ]
+        }
+      ]
+    },
+    "downstream": {
+      "name": "下游 · 应用与分发",
+      "aiPenetration": "medium",
+      "nodes": [
+        {
+          "name": "文本生成（营销/客服）",
+          "valueShare": 15,
+          "marginRange": [
+            20,
+            50
+          ]
+        },
+        {
+          "name": "图像/视频生成",
+          "valueShare": 10,
+          "marginRange": [
+            15,
+            30
+          ]
+        },
+        {
+          "name": "代码生成与自动化",
+          "valueShare": 10,
+          "marginRange": [
+            25,
+            40
+          ]
+        },
+        {
+          "name": "音视频合成",
+          "valueShare": 5,
+          "marginRange": [
+            10,
+            25
+          ]
+        }
+      ]
+    }
+  },
+  "playerCategories": [
+    {
+      "category": "巨头/平台型",
+      "players": [
+        {
+          "name": "百度",
+          "description": "文心大模型+智能云，政企客户封闭生态"
+        },
+        {
+          "name": "阿里",
+          "description": "通义千问+钉钉，电商场景内嵌生成"
+        },
+        {
+          "name": "腾讯",
+          "description": "混元大模型，社交/游戏生态入口"
+        }
+      ]
+    },
+    {
+      "category": "垂直领域龙头",
+      "players": [
+        {
+          "name": "科大讯飞",
+          "description": "星火大模型，教育医疗深耕数据"
+        },
+        {
+          "name": "商汤科技",
+          "description": "日日新大模型，视觉+生成合并优势"
+        }
+      ]
+    },
+    {
+      "category": "AI创业新锐",
+      "players": [
+        {
+          "name": "智谱AI",
+          "description": "GLM开源生态，开发者社区粘性高"
+        },
+        {
+          "name": "月之暗面",
+          "description": "Moonshot长文本模型，C端体验极致"
+        },
+        {
+          "name": "Minimax",
+          "description": "多模态泛娱乐，音视频生成快"
+        }
+      ]
+    },
+    {
+      "category": "隐形冠军",
+      "players": [
+        {
+          "name": "深度求索",
+          "description": "专业领域代码生成，GitHub星标领先"
+        },
+        {
+          "name": "聆心智能",
+          "description": "心理垂直大模型，临床数据壁垒"
+        }
+      ]
+    }
+  ],
+  "aiOpportunities": [
+    {
+      "title": "AI驱动的短视频自动化脚本生成",
+      "maturityScore": 4,
+      "valueCeilingScore": 4,
+      "verdict": "scaling"
+    },
+    {
+      "title": "AI辅助3D资产生成（游戏/影视）",
+      "maturityScore": 3,
+      "valueCeilingScore": 5,
+      "verdict": "pre-boom"
+    },
+    {
+      "title": "AI实时语音克隆与声音合成",
+      "maturityScore": 3,
+      "valueCeilingScore": 3,
+      "verdict": "hot"
+    }
+  ],
+  "portersFive": [
+    {
+      "force": "新进入者威胁",
+      "intensity": 5,
+      "rationale": "开源模型降低门槛，每天百家公司涌入"
+    },
+    {
+      "force": "供应商议价能力",
+      "intensity": 4,
+      "rationale": "英伟达GPU垄断，定价权极高"
+    },
+    {
+      "force": "买方议价能力",
+      "intensity": 3,
+      "rationale": "企业客户切换成本低，但定制化粘性有"
+    },
+    {
+      "force": "替代品威胁",
+      "intensity": 2,
+      "rationale": "传统人工创作仍为主流，但效率差距扩大"
+    },
+    {
+      "force": "现有竞争者强度",
+      "intensity": 5,
+      "rationale": "百模大战，价格战惨烈，月费降幅超70%"
+    }
+  ],
+  "trends": [
+    {
+      "title": "从对话到多模态一体化",
+      "body": "GPT-4o等模型整合文本/图像/音频，实时交互。App端生成占比超50%。",
+      "callout": "需提前规划多模态输入输出，而非单独对话"
+    },
+    {
+      "title": "垂直小模型崛起取代通用大模型",
+      "body": "医疗/法律/金融垂域模型参数量减半，性能反超。95%企业选择定制微调。",
+      "callout": "专注行业数据飞轮，而非通用能力"
+    }
+  ],
+  "myths": [
+    {
+      "myth": "AIGC会完全替代人类创作者",
+      "reality": "实际是提效工具，头部内容仍需人工把控"
+    },
+    {
+      "myth": "开源大模型与闭源没区别",
+      "reality": "商用合规风险高，70%企业选闭源"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "中国AIGC市场2024年规模最接近哪个数字？",
+      "options": [
+        "200亿",
+        "386亿",
+        "600亿",
+        "1000亿"
+      ],
+      "correctIndex": 1,
+      "explanation": "IDC报告显示386亿，CAGR 38%"
+    },
+    {
+      "question": "下列哪家是垂直领域龙头？",
+      "options": [
+        "百度",
+        "智谱AI",
+        "科大讯飞",
+        "月之暗面"
+      ],
+      "correctIndex": 2,
+      "explanation": "科大讯飞深耕教育医疗，属龙头"
+    }
+  ],
+  "compareData": {
+    "market": "中国AIGC 386亿（2024）",
+    "cagr": "38%（2021-2024）",
+    "cr5": "头部五家占比约65%",
+    "stage": "成长早期",
+    "aiPenetration": "企业用户12%，渗透率低",
+    "barrier": "算力资本投入极高（单模型训练超1亿）",
+    "salesCycle": "1-3个月（API付费）至6个月（定制化）",
+    "topPlayers": "百度、阿里、腾讯、智谱、科大讯飞",
+    "strength": "政策大力支持，数据规模大",
+    "weakness": "基础算力受制，同质化严重"
+  },
+  "sources": [
+    "IDC《中国AIGC市场预测，2024-2028》",
+    "中国信通院《AIGC应用发展报告（2024）》",
+    "WIPO《2024年全球AI专利统计》",
+    "科技部《新一代人工智能发展规划》"
+  ],
+  "slug": "aigc"
+}

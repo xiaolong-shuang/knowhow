@@ -3,12 +3,15 @@
 import { useState, useCallback, useEffect } from 'react'
 import type { IndustrySchema } from '@/types'
 import { STAGE_LABELS } from '@/lib/utils'
+import { useAnalyzeStore } from '@/stores/analyze'
+import { getAnonymousId } from '@/lib/anonymous-id'
 import { IndustryHero } from '@/components/industry/industry-hero'
 import { L1Overview } from '@/components/industry/l1-overview'
 import { L2Structure } from '@/components/industry/l2-structure'
 import { L3Insights } from '@/components/industry/l3-insights'
 import { QuizSection } from '@/components/industry/quiz-section'
 import { SourceFooter } from '@/components/industry/source-footer'
+import { FeedbackBar } from '@/components/shared/feedback-bar'
 import { Rule } from '@/components/ui/rule'
 import { SectionTabs } from '@/components/layout/section-tabs'
 import { Breadcrumb } from '@/components/ui/breadcrumb'
@@ -40,7 +43,9 @@ export function AnalyzeContent({ initialQuery }: Props) {
   const [data, setData] = useState<IndustrySchema | null>(null)
   const [error, setError] = useState('')
   const [isFallback, setIsFallback] = useState(false)
+  const [cacheHit, setCacheHit] = useState(false)
   const [hasStarted, setHasStarted] = useState(false)
+  const setAnalyzeData = useAnalyzeStore((s) => s.setData)
 
   const run = useCallback(async (industry: string) => {
     if (!industry.trim()) return
@@ -61,7 +66,7 @@ export function AnalyzeContent({ initialQuery }: Props) {
       const res = await fetch('/api/analyze', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ industry: industry.trim() }),
+        body: JSON.stringify({ industry: industry.trim(), anonymousId: getAnonymousId() }),
       })
 
       if (!res.ok) {
@@ -75,7 +80,9 @@ export function AnalyzeContent({ initialQuery }: Props) {
 
       const parsed = json.data as IndustrySchema
       setData(parsed)
+      setAnalyzeData(parsed)
       if (json.fallback) setIsFallback(true)
+      if (json.cacheHit) setCacheHit(true)
       setPhase('done')
       setPhaseIndex(PHASES.length)
     } catch (e: any) {
@@ -147,6 +154,12 @@ export function AnalyzeContent({ initialQuery }: Props) {
             </div>
           )}
 
+          {cacheHit && (
+            <p className="text-[0.7rem] text-cool-gray mb-3 border border-rule-light bg-warm-bg/50 px-3 py-1.5 inline-block">
+              ⚡ 缓存命中 · 该分析在 14 天内生成，无需重新调用 AI
+            </p>
+          )}
+
           {data.headlineMetrics.length > 0 && (
             <>
               <section id="l1-overview">
@@ -183,6 +196,8 @@ export function AnalyzeContent({ initialQuery }: Props) {
           <Rule />
 
           <SourceFooter sources={data.sources} />
+
+          <FeedbackBar query={q} cacheHit={cacheHit} />
 
           <div className="mt-8 pt-6 border-t border-rule-light mb-12">
             <div className="text-[0.75rem] text-cool-gray mb-4">
